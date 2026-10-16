@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Cookies — Zuppy Fun Park</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#C8DEB0;
+    --cream-2:#B1D08E;
+    --ink:#26243E;
+    --tangerine:#F5821F;
+    --tangerine-dark:#D9650A;
+    --teal:#6FA82E;
+    --teal-dark:#4F7A1F;
+    --yellow:#FFC94D;
+    --pink:#E5157A;
+    --purple:#8B4FA6;
+    --blue:#2E9BD6;
+    --purple-dark:#6E3D85;
+    --pink-dark:#B81062;
+    --blue-dark:#1F7AAE;
+    --white:#FFFFFF;
+    --max: 1160px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#42642F;
+      --cream-2:#517B2E;
+      --ink:#FFF6E9;
+      --white:#243B41;
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream:#42642F;
+    --cream-2:#517B2E;
+    --ink:#FFF6E9;
+    --white:#243B41;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.wordmark{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    line-height:1.05;
+    margin:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--cream) 88%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav-inner{
+    max-width:var(--max);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .wordmark{font-size:1.5rem;color:var(--teal);letter-spacing:-0.5px;}
+  .wordmark span{color:var(--teal);}
+  .nav-links{display:flex;gap:28px;font-weight:600;font-size:0.95rem;list-style:none;margin:0;padding:0;}
+  .nav-links a{text-decoration:none;position:relative;}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-4px;width:0;height:3px;
+    background:var(--teal);border-radius:2px;transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--teal);color:var(--white);
+    padding:10px 20px;border-radius:100px;font-weight:700;
+    text-decoration:none;font-size:0.9rem;
+    box-shadow:3px 3px 0 var(--ink);
+    border:2px solid var(--ink);
+    transition:transform .15s ease;
+  }
+  .nav-cta:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+  .burger{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:90px 0 70px;
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;
+  }
+  .eyebrow-free{
+    display:inline-block;background:var(--yellow);color:var(--ink);
+    padding:6px 16px;border-radius:100px;font-weight:700;font-size:0.85rem;
+    border:2px solid var(--ink);
+    transform:rotate(-3deg);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 5.5vw, 4.2rem);
+    color:var(--ink);
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--teal);
+  }
+  .hero p{
+    font-size:1.15rem;max-width:46ch;margin-top:20px;color:var(--ink);opacity:0.85;
+  }
+  .hero-ctas{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--teal);color:var(--white);
+    padding:16px 30px;border-radius:100px;font-weight:700;
+    text-decoration:none;font-size:1.05rem;
+    border:2px solid var(--ink);
+    box-shadow:4px 4px 0 var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--ink);}
+  .btn-secondary{
+    background:transparent;color:var(--ink);
+    padding:16px 30px;border-radius:100px;font-weight:700;
+    text-decoration:none;font-size:1.05rem;
+    border:2px solid var(--ink);
+    transition:background .15s ease;
+  }
+  .btn-secondary:hover{background:var(--cream-2);}
+
+  .hero-art{
+    position:relative;
+    aspect-ratio:1/1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .blob{
+    position:absolute;inset:0;
+    background:var(--teal);
+    border-radius:62% 38% 55% 45% / 45% 55% 45% 55%;
+    animation:morph 9s ease-in-out infinite;
+  }
+  @keyframes morph{
+    0%,100%{border-radius:62% 38% 55% 45% / 45% 55% 45% 55%;}
+    50%{border-radius:45% 55% 40% 60% / 55% 45% 60% 40%;}
+  }
+  .hero-art svg{position:relative;width:78%;height:78%;}
+  .float-badge{
+    position:absolute;
+    background:var(--white);
+    border:2px solid var(--ink);
+    border-radius:16px;
+    padding:10px 16px;
+    font-weight:700;
+    font-family:'Baloo 2',sans-serif;
+    font-size:0.95rem;
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  .float-badge.b1{top:6%;right:-4%;color:var(--teal);transform:rotate(6deg);}
+  .float-badge.b2{bottom:8%;left:-6%;color:var(--teal-dark);transform:rotate(-5deg);}
+
+  /* ---------- Stats strip ---------- */
+  .stats{
+    border-top:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .stats-inner{
+    max-width:var(--max);margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:repeat(4,1fr);
+  }
+  .stat{
+    padding:32px 16px;text-align:center;
+    border-right:1px solid color-mix(in srgb, var(--cream) 25%, transparent);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:'Baloo 2',sans-serif;font-size:2.4rem;color:var(--yellow);
+  }
+  .stat .lbl{font-size:0.85rem;opacity:0.8;margin-top:4px;}
+
+  /* ---------- Section heading pattern ---------- */
+  .section{padding:100px 0;}
+  .section-head{
+    max-width:620px;margin-bottom:56px;
+  }
+  .section-head .tag{
+    color:var(--teal);font-weight:700;font-size:0.95rem;
+  }
+  .section-head h2{
+    font-size:clamp(2rem,3.5vw,2.8rem);margin-top:8px;
+  }
+  .section-head p{margin-top:14px;opacity:0.8;font-size:1.05rem;}
+
+  /* ---------- Activities: asymmetric rows ---------- */
+  .activity-row{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:50px;align-items:center;
+    padding:44px 0;
+    border-top:2px dashed color-mix(in srgb, var(--ink) 25%, transparent);
+  }
+  .activity-row:last-child{border-bottom:2px dashed color-mix(in srgb, var(--ink) 25%, transparent);}
+  .activity-row:nth-child(even){grid-template-columns:1.1fr 0.9fr;}
+  .activity-row:nth-child(even) .act-visual{order:2;}
+  .act-visual{
+    aspect-ratio:4/3;border-radius:28px;border:2px solid var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;overflow:hidden;
+  }
+  .act-visual svg{width:55%;height:55%;}
+  .act-num{
+    position:absolute;top:14px;left:14px;
+    font-family:'Baloo 2',sans-serif;font-weight:700;
+    font-size:0.85rem;background:var(--white);
+    border:2px solid var(--ink);border-radius:100px;
+    padding:4px 12px;
+  }
+  .act-text h3{font-size:1.7rem;margin-bottom:12px;}
+  .act-text p{opacity:0.82;}
+  .act-text .age{
+    display:inline-block;margin-top:16px;font-weight:700;font-size:0.85rem;
+    color:var(--teal-dark);
+  }
+
+  /* ---------- Parties section ---------- */
+  .parties{
+    background:var(--teal);color:var(--white);
+    border-radius:36px;
+    padding:64px 48px;
+    display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+    border:2px solid var(--ink);
+  }
+  .parties h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--white);}
+  .parties p{opacity:0.92;margin-top:16px;font-size:1.05rem;}
+  .party-list{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .party-list li{
+    display:flex;gap:12px;align-items:flex-start;font-weight:500;
+  }
+  .party-list li::before{
+    content:"✓";
+    background:var(--yellow);color:var(--ink);
+    width:24px;height:24px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:0.8rem;font-weight:700;flex-shrink:0;margin-top:2px;
+  }
+  .party-card{
+    background:var(--cream);color:var(--ink);
+    border-radius:24px;border:2px solid var(--ink);
+    padding:32px;box-shadow:6px 6px 0 var(--ink-dark, #0A5F63);
+  }
+  .party-card .price{font-family:'Baloo 2',sans-serif;font-size:2.6rem;color:var(--teal);}
+  .party-card .price span{font-size:1rem;font-family:'Inter',sans-serif;font-weight:600;color:var(--ink);opacity:0.7;}
+  .party-card ul{margin:18px 0 26px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:0.95rem;}
+  .party-card ul li::before{content:"— ";color:var(--teal-dark);font-weight:700;}
+
+  /* ---------- Visit / practical info ---------- */
+  .visit-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .visit-card{
+    background:var(--white);
+    border:2px solid var(--ink);
+    border-radius:24px;
+    padding:32px;
+  }
+  .visit-card:nth-child(1){transform:rotate(-1.2deg);}
+  .visit-card:nth-child(2){transform:rotate(0.8deg);}
+  .visit-card:nth-child(3){transform:rotate(-0.5deg);}
+  .visit-card .icon{
+    width:52px;height:52px;border-radius:14px;
+    background:var(--yellow);border:2px solid var(--ink);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  }
+  .visit-card h3{font-size:1.25rem;margin-bottom:10px;}
+  .visit-card p{opacity:0.8;font-size:0.95rem;margin:0;}
+  .visit-card .strong-line{font-weight:700;opacity:1;color:var(--ink);}
+
+  /* ---------- Testimonials ---------- */
+  .testi-track{
+    display:flex;gap:24px;overflow-x:auto;padding-bottom:8px;
+    scrollbar-width:thin;
+  }
+  .testi-card{
+    flex:0 0 320px;
+    background:var(--cream-2);
+    border:2px solid var(--ink);
+    border-radius:24px;padding:28px;
+  }
+  .testi-card .quote{font-size:1.05rem;line-height:1.6;}
+  .testi-card .who{
+    margin-top:18px;font-family:'Baloo 2',sans-serif;font-weight:600;
+    color:var(--teal);font-size:0.95rem;
+  }
+  .stars{color:var(--yellow);letter-spacing:2px;margin-bottom:12px;filter:drop-shadow(1px 1px 0 var(--ink));}
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    text-align:center;padding:100px 24px;
+    position:relative;
+  }
+  .final-cta h2{font-size:clamp(2.2rem,5vw,3.4rem);max-width:16ch;margin:0 auto;}
+  .final-cta p{max-width:50ch;margin:18px auto 0;opacity:0.8;font-size:1.1rem;}
+  .final-cta .hero-ctas{justify-content:center;margin-top:34px;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:2px solid var(--ink);
+    padding:48px 0 32px;
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .footer-inner{
+    display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;
+  }
+  .footer-inner .wordmark{color:var(--yellow);}
+  .footer-inner .wordmark span{color:var(--teal);}
+  .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
+  .footer-col h4{font-family:'Baloo 2',sans-serif;font-size:1rem;margin-bottom:14px;color:var(--yellow);}
+  .footer-col a, .footer-col p{
+    display:block;text-decoration:none;color:var(--cream);opacity:0.8;
+    font-size:0.9rem;margin-bottom:8px;
+  }
+  .foot-bottom{
+    margin-top:40px;padding-top:24px;
+    border-top:1px solid color-mix(in srgb, var(--cream) 20%, transparent);
+    font-size:0.8rem;opacity:0.6;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .nav-links{display:none;}
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-art{max-width:340px;margin:0 auto;}
+    .stats-inner{grid-template-columns:repeat(2,1fr);}
+    .stat{border-bottom:1px solid color-mix(in srgb, var(--cream) 25%, transparent);}
+    .activity-row, .activity-row:nth-child(even){grid-template-columns:1fr;}
+    .activity-row:nth-child(even) .act-visual{order:0;}
+    .act-visual{max-width:380px;}
+    .parties{grid-template-columns:1fr;padding:40px 28px;}
+    .visit-grid{grid-template-columns:1fr;}
+    .footer-inner{flex-direction:column;}
+  }
+
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    .blob{animation:none;}
+    *{transition:none !important;}
+  }
+</style>
+<style>
+
+.legal-hero{padding:70px 0 10px;}
+.legal-hero h1{font-size:clamp(2rem,4vw,2.8rem);max-width:22ch;}
+.legal-hero p{margin-top:12px;opacity:0.7;font-size:0.92rem;}
+.legal-body{max-width:760px;padding:30px 0 100px;}
+.legal-body h2{font-size:1.3rem;margin:34px 0 12px;}
+.legal-body h2:first-child{margin-top:0;}
+.legal-body p, .legal-body li{font-size:0.96rem;opacity:0.85;line-height:1.65;}
+.legal-body ul{padding-left:22px;}
+.legal-body table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.88rem;}
+.legal-body th, .legal-body td{border:2px solid var(--ink);padding:10px 12px;text-align:left;}
+.legal-body th{background:var(--cream-2);font-family:'Baloo 2',sans-serif;}
+
+
+.cookie-banner{
+  position:fixed;left:0;right:0;bottom:0;z-index:300;
+  transform:translateY(130%);
+  transition:transform .55s cubic-bezier(.19,1,.22,1);
+  padding:0 20px;
+}
+.cookie-banner.show{transform:translateY(0);}
+.cookie-inner{
+  max-width:920px;margin:0 auto 22px;
+  background:var(--white);border:2px solid var(--ink);border-radius:24px;
+  padding:26px 30px;
+  box-shadow:0 8px 0 var(--ink), 0 24px 48px rgba(0,0,0,.18);
+  display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+}
+.cookie-icon{
+  width:52px;height:52px;border-radius:16px;background:var(--yellow);
+  border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;flex-shrink:0;
+}
+.cookie-text{flex:1 1 320px;min-width:220px;}
+.cookie-text p{margin:0;font-size:0.92rem;opacity:0.82;}
+.cookie-text a{color:var(--teal);font-weight:700;text-decoration:underline;}
+.cookie-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.cookie-btn{
+  border:2px solid var(--ink);border-radius:100px;padding:11px 20px;
+  font-weight:700;font-size:0.88rem;cursor:pointer;font-family:'Inter',sans-serif;
+  white-space:nowrap;
+}
+.cookie-btn.accept{background:var(--teal);color:var(--white);box-shadow:3px 3px 0 var(--ink);}
+.cookie-btn.essential{background:transparent;color:var(--ink);}
+@media (max-width:640px){.cookie-inner{padding:22px;}.cookie-actions{width:100%;}.cookie-btn{flex:1;text-align:center;}}
+
+</style>
+<style>
+/* ---- Catchy motion layer ---- */
+/* ---- Mobile menu ---- */
+.burger{display:none;}
+@media (max-width:860px){
+  .nav-inner{gap:10px;}
+  .burger{
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    width:40px;height:40px;border:2px solid var(--ink);border-radius:10px;
+    background:var(--white);cursor:pointer;box-shadow:2px 2px 0 var(--ink);
+    flex-shrink:0;padding:0;
+  }
+  .burger span{width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s ease, opacity .2s ease;}
+  .burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.active span:nth-child(2){opacity:0;}
+  .burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .nav-cta{padding:9px 13px;font-size:0.8rem;}
+  .nav-cta svg{width:13px;height:13px;}
+
+  .nav-links{
+    display:flex !important;position:fixed;top:0;right:0;height:100dvh;width:78%;max-width:300px;
+    background:var(--cream);flex-direction:column;align-items:flex-start;
+    padding:90px 28px 28px;gap:4px;border-left:2px solid var(--ink);
+    transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1);
+    z-index:150;margin:0;overflow-y:auto;
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-links li{width:100%;}
+  .nav-links a{font-size:1.1rem;display:block;padding:12px 0;width:100%;border-bottom:1px solid var(--cream-2);}
+  .nav-links a::after{display:none;}
+
+  .nav-overlay{display:none;position:fixed;inset:0;background:rgba(38,36,62,0.45);z-index:140;}
+  .nav-overlay.show{display:block;}
+}
+@media (max-width:360px){
+  .logo-img{height:32px;}
+  .nav-cta span{display:none;}
+}
+@media (max-width:600px){
+  .legal-body table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .promo-strip{flex-direction:column;align-items:flex-start;}
+  .pkg-card.featured{transform:none;}
+}
+@media (max-width:860px){
+  /* ---- Compact mobile spacing (less scrolling) ---- */
+  .section{padding:52px 0;}
+  .hero{padding:44px 0 32px;}
+  .hero-inner{gap:24px;}
+  .hero h1{font-size:clamp(2.1rem,8vw,2.6rem);}
+  .hero p{margin-top:14px;}
+  .hero-ctas{margin-top:22px;gap:12px;}
+  .hero-art{max-width:260px;}
+  .final-cta{padding:52px 20px;}
+  footer{padding:32px 0 20px;}
+  .stat{padding:18px 10px;}
+  .stat .num{font-size:1.9rem;}
+  .parties{padding:32px 22px;}
+  .activity-row{padding:26px 0;gap:26px;}
+  .pkg-grid{padding:26px 0 44px;gap:16px;}
+  .card-grid{padding-bottom:44px;gap:16px;}
+  .visit-grid{padding-bottom:36px;gap:16px;}
+  .jobs-grid{padding:18px 0 32px;gap:16px;}
+  .faq{padding-bottom:48px;}
+  .faq-item{padding:14px 0;}
+  .values{padding:10px 0 44px;gap:16px;}
+  .story{padding:32px 0;gap:26px;}
+  .page-hero{padding:40px 0 12px !important;}
+  .legal-hero{padding:44px 0 6px !important;}
+  .legal-body{padding:16px 0 48px !important;}
+  .section-head{margin-bottom:28px;}
+  .contact-grid{padding:26px 0 48px;gap:26px;}
+  .promo-strip{margin-bottom:28px;padding:16px 18px;}
+  .filters{margin:16px 0 26px;}
+  .stats-inner{gap:0;}
+}
+
+
+
+/* ---- Mobile compact spacing ---- */
+@media (max-width:860px){
+  .section{padding:56px 0;}
+  .hero{padding:50px 0 34px;}
+  .page-hero{padding:50px 0 18px !important;}
+  .section-head{margin-bottom:30px;}
+  .final-cta{padding:60px 20px;}
+  .parties{padding:40px 24px;}
+  .activity-row{padding:26px 0;}
+  .stat{padding:22px 10px;}
+  .hero-ctas{margin-top:22px;gap:12px;}
+  .eyebrow-free{margin-bottom:14px;}
+  .visit-card, .value-card, .act-card, .pkg-card, .testi-card, .job-card{padding:20px;}
+  .card-grid, .visit-grid, .pkg-grid, .values, .jobs-grid, .filters{gap:14px;}
+  footer{padding:36px 0 22px;}
+  .footer-inner{gap:24px;}
+  .footer-cols{gap:28px;}
+  .story{padding:36px 0;gap:28px;}
+}
+@media (max-width:600px){
+  .section{padding:42px 0;}
+  .hero{padding:38px 0 28px;}
+  .page-hero{padding:38px 0 12px !important;}
+  .section-head{margin-bottom:22px;}
+  .final-cta{padding:48px 18px;}
+  .activity-row{padding:20px 0;}
+  .faq-item{padding:14px 0;}
+}
+/* ---- Logo + logo-driven accent palette ---- */
+.logo-link{display:flex;align-items:center;transition:transform .2s cubic-bezier(.34,1.56,.64,1);}
+.logo-link:hover{transform:scale(1.06) rotate(-2deg);}
+.logo-img{height:46px;width:auto;display:block;}
+footer .logo-img{height:38px;}
+@media (max-width:860px){.logo-img{height:38px;}}
+
+.act-card:nth-of-type(4n+1) .ic{background:#FFE7B3;}
+.act-card:nth-of-type(4n+2) .ic{background:#C9E8F7;}
+.act-card:nth-of-type(4n+3) .ic{background:#DCF0BE;}
+.act-card:nth-of-type(4n+4) .ic{background:#F8CBE6;}
+
+.value-card:nth-of-type(3n+1) .num{color:var(--teal);}
+.value-card:nth-of-type(3n+2) .num{color:var(--pink);}
+.value-card:nth-of-type(3n+3) .num{color:var(--purple);}
+
+.visit-card:nth-of-type(3n+1) .icon{background:var(--yellow);}
+.visit-card:nth-of-type(3n+2) .icon{background:var(--blue);}
+.visit-card:nth-of-type(3n+3) .icon{background:var(--pink);}
+
+.faq-q .plus{color:var(--purple);}
+.float-badge.b2{color:var(--purple) !important;}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+
+.eyebrow-free{animation:popIn .55s cubic-bezier(.34,1.56,.64,1) both;}
+@keyframes popIn{from{opacity:0;transform:scale(.65) rotate(-3deg);}to{opacity:1;transform:scale(1) rotate(-3deg);}}
+
+.btn-primary, .btn-secondary, .nav-cta, .submit-btn, .cookie-accept, .filter-btn, .act-card, .value-card, .testi-card, .visit-card, .pkg-card{
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, background .2s ease;
+}
+.btn-primary:hover, .nav-cta:hover, .cookie-accept:hover, .submit-btn:hover{
+  transform:translate(-3px,-4px) rotate(-1.5deg);
+  box-shadow:7px 8px 0 var(--ink);
+}
+.btn-primary:active, .nav-cta:active, .cookie-accept:active, .submit-btn:active{
+  transform:translate(0,0) rotate(0);box-shadow:2px 2px 0 var(--ink);
+}
+.btn-secondary:hover{transform:translateY(-3px) rotate(1deg);}
+.filter-btn:hover{transform:translateY(-2px) scale(1.04);}
+
+.act-card:hover, .value-card:hover, .testi-card:hover, .visit-card:hover{
+  transform:translateY(-8px) scale(1.02) !important;
+  box-shadow:6px 8px 0 var(--ink);
+}
+.pkg-card:hover{transform:translateY(-6px);}
+.pkg-card.featured:hover{transform:translateY(-16px);}
+
+@keyframes wiggleB1{0%,100%{transform:rotate(6deg) translateY(0);}50%{transform:rotate(10deg) translateY(-8px);}}
+@keyframes wiggleB2{0%,100%{transform:rotate(-5deg) translateY(0);}50%{transform:rotate(-9deg) translateY(-8px);}}
+.float-badge.b1{animation:wiggleB1 3.4s ease-in-out infinite;}
+.float-badge.b2{animation:wiggleB2 3.4s ease-in-out infinite;animation-delay:.5s;}
+
+.blob{animation:morph 9s ease-in-out infinite, drift 6s ease-in-out infinite;}
+@keyframes drift{0%,100%{transform:translate(0,0);}50%{transform:translate(6px,-10px);}}
+
+nav{transition:box-shadow .25s ease, background .25s ease;}
+nav.scrolled{box-shadow:0 4px 0 var(--ink);}
+
+.stat .num{display:inline-block;}
+.wordmark{transition:transform .2s ease;}
+.wordmark:hover{transform:rotate(-3deg) scale(1.05);}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  .eyebrow-free, .float-badge, .blob{animation:none;}
+}
+</style>
+
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo-link"><img src="zuppy-logo.png" alt="Zuppy Fun Park" class="logo-img"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="atividades.html">Atividades</a></li>
+<li><a href="precos.html">Preços &amp; Festas</a></li>
+<li><a href="visita.html">Visita &amp; FAQ</a></li>
+<li><a href="trabalhe-connosco.html">Trabalhe Connosco</a></li>
+<li><a href="contactos.html">Contactos</a></li>
+
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</nav>
+<section class="wrap legal-hero">
+  <span class="eyebrow-free">Legal</span>
+  <h1>Política de Cookies</h1>
+  <p>Última atualização: 24 de setembro de 2026</p>
+</section>
+<section class="wrap legal-body">
+
+<h2>O que são cookies</h2>
+<p>Cookies são pequenos ficheiros guardados no teu dispositivo quando visitas o site do Zuppy Fun Park. Ajudam o site a funcionar corretamente e a perceber como é utilizado.</p>
+<h2>Que cookies usamos</h2>
+<table>
+  <tr><th>Tipo</th><th>Finalidade</th><th>Duração</th></tr>
+  <tr><td>Essenciais</td><td>Guardar a tua escolha de consentimento de cookies</td><td>12 meses</td></tr>
+  <tr><td>Analíticos</td><td>Perceber quantas pessoas visitam cada página</td><td>6 meses</td></tr>
+  <tr><td>Preferências</td><td>Lembrar idioma e definições de visualização</td><td>12 meses</td></tr>
+</table>
+<h2>Como geres as tuas escolhas</h2>
+<p>Podes aceitar ou rejeitar cookies não essenciais a qualquer momento através do botão "🍪 Cookies" visível no canto do site, ou apagando os cookies diretamente nas definições do teu browser.</p>
+<h2>Contacto</h2>
+<p>Para questões sobre esta política, escreve-nos para <a href="mailto:Zuppyfunpark@gmail.com">Zuppyfunpark@gmail.com</a>.</p>
+
+</section>
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <a href="index.html" class="logo-link"><img src="zuppy-logo.png" alt="Zuppy Fun Park" class="logo-img"></a>
+      <p style="opacity:0.7;font-size:0.9rem;margin-top:10px;max-width:26ch;">Fun Park indoor em Coimbra, para toda a família.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="atividades.html">Atividades</a>
+        <a href="precos.html">Preços &amp; Festas</a>
+        <a href="visita.html">Visita &amp; FAQ</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="trabalhe-connosco.html">Trabalhe Connosco</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <a href="tel:+351969258511">969 258 511</a>
+        <a href="tel:+351964655801">964 655 801</a>
+        <a href="mailto:Zuppyfunpark@gmail.com">Zuppyfunpark@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="cookies.html">Política de Cookies</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos e Condições</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Zuppy Fun Park — Coimbra</span>
+    <span>Feito com saltos e confetes 🎉</span>
+  </div>
+</footer>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      <p>Usamos cookies para o site funcionar bem e perceber como o visitas. Podes aceitar tudo ou manter só os essenciais — mais detalhes na nossa <a href="politica-cookies.html">Política de Cookies</a>.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn essential" id="cookieEssential">Só o essencial</button>
+      <button class="cookie-btn accept" id="cookieAccept">Aceitar tudo</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const banner = document.getElementById('cookieBanner');
+  const KEY = 'zuppyCookieConsent';
+  const saved = localStorage.getItem(KEY);
+  if (!saved) {
+    setTimeout(() => banner.classList.add('show'), 600);
+  }
+  function setConsent(value){
+    localStorage.setItem(KEY, value);
+    banner.classList.remove('show');
+  }
+  document.getElementById('cookieAccept').addEventListener('click', () => setConsent('all'));
+  document.getElementById('cookieEssential').addEventListener('click', () => setConsent('essential'));
+})();
+</script>
+
+<style>
+.cookie-overlay{
+  position:fixed;inset:0;background:rgba(27,42,47,0.55);
+  display:none;align-items:center;justify-content:center;z-index:200;padding:20px;
+}
+.cookie-overlay.show{display:flex;}
+.cookie-card{
+  background:var(--cream);border:2px solid var(--ink);border-radius:26px;
+  max-width:440px;width:100%;padding:32px;box-shadow:6px 6px 0 var(--ink);
+  text-align:left;position:relative;
+}
+.cookie-card .cookie-icon{
+  width:52px;height:52px;border-radius:16px;background:var(--yellow);
+  border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:16px;
+}
+.cookie-card h3{font-family:'Baloo 2',sans-serif;font-size:1.35rem;margin:0 0 10px;}
+.cookie-card p{font-size:0.92rem;opacity:0.82;margin:0 0 22px;line-height:1.55;}
+.cookie-card p a{color:var(--teal-dark);font-weight:700;text-decoration:underline;}
+.cookie-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.cookie-actions button{
+  font-family:'Inter',sans-serif;font-weight:700;font-size:0.9rem;
+  border:2px solid var(--ink);border-radius:100px;padding:11px 20px;cursor:pointer;
+}
+.cookie-accept{background:var(--teal);color:var(--white);box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease;}
+.cookie-accept:hover{transform:translate(-2px,-2px);}
+.cookie-reject{background:transparent;color:var(--ink);}
+.cookie-reject:hover{background:var(--cream-2);}
+</style>
+<div class="cookie-overlay" id="cookieOverlay">
+  <div class="cookie-card">
+    <div class="cookie-icon">🫘</div>
+    <h3>Antes de saltares por aí...</h3>
+    <p>Usamos cookies essenciais para o site funcionar e cookies opcionais para perceber como o parque é visitado online. Podes ler todos os detalhes na nossa <a href="cookies.html">Política de Cookies</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-accept" id="cookieAccept">Aceitar tudo</button>
+      <button class="cookie-reject" id="cookieReject">Só o essencial</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var overlay = document.getElementById('cookieOverlay');
+  var stored = localStorage.getItem('zuppyCookieConsent');
+  if(!stored){ overlay.classList.add('show'); }
+  function close(choice){
+    localStorage.setItem('zuppyCookieConsent', choice);
+    overlay.classList.remove('show');
+  }
+  document.getElementById('cookieAccept').addEventListener('click', function(){ close('accepted'); });
+  document.getElementById('cookieReject').addEventListener('click', function(){ close('rejected'); });
+})();
+</script>
+
+<script>
+(function(){
+  // Scroll-reveal
+  var targets = document.querySelectorAll(
+    '.activity-row, .act-card, .value-card, .testi-card, .visit-card, .pkg-card, .faq-item, .story, .parties, .form-box, .map-box, .section-head, .legal-body h2, .stat'
+  );
+  targets.forEach(function(el){ el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  targets.forEach(function(el){ io.observe(el); });
+
+  // Nav shadow on scroll
+  var nav = document.querySelector('nav');
+  if(nav){
+    window.addEventListener('scroll', function(){
+      nav.classList.toggle('scrolled', window.scrollY > 12);
+    });
+  }
+
+  // Count-up stats
+  document.querySelectorAll('.stat .num').forEach(function(el){
+    var raw = el.textContent.trim();
+    var match = raw.match(/^\d+$/);
+    if(!match) return;
+    var target = parseInt(raw, 10);
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var start = 0, duration = 900, startTime = null;
+          function step(ts){
+            if(!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * target);
+            if(progress < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+          }
+          requestAnimationFrame(step);
+          obs.unobserve(el);
+        }
+      });
+    }, {threshold:0.4});
+    obs.observe(el);
+  });
+})();
+</script>
+
+<style>
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:120;
+  width:76px;height:76px;border-radius:50%;
+  background:#25D366;border:2px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:3px 3px 0 var(--ink);
+  transition:transform .2s cubic-bezier(.34,1.56,.64,1);
+  animation:waPulse 2.6s ease-in-out infinite;
+}
+.wa-float:hover{transform:scale(1.08) rotate(-4deg);}
+.wa-float svg{width:38px;height:38px;}
+@keyframes waPulse{
+  0%,100%{box-shadow:3px 3px 0 var(--ink), 0 0 0 0 rgba(37,211,102,0.45);}
+  50%{box-shadow:3px 3px 0 var(--ink), 0 0 0 10px rgba(37,211,102,0);}
+}
+.nav-cta.wa-cta{
+  background:#25D366;display:inline-flex;align-items:center;gap:8px;
+}
+.nav-cta.wa-cta svg{width:16px;height:16px;flex-shrink:0;}
+@media (max-width:860px){.wa-float{width:64px;height:64px;bottom:18px;right:18px;}}
+</style>
+<a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20saber%20mais%20sobre%20o%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="wa-float" aria-label="Fala connosco no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="#1B2A2F" stroke-width="1.4"/><path d="M11.5 11.5c.3-.6.9-.6 1.3-.6h.5c.3 0 .5.1.7.6l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.1.1-.1.3 0 .5.4.8 1 1.6 1.8 2.2.7.6 1.4 1 2.1 1.3.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.2.5.3.5.6 0 1-1.3 1.9-2.2 1.9-1.7 0-3.6-.8-5-2.1-1.5-1.3-2.5-3-2.9-4.6-.2-.9.2-1.8.5-2.4Z" fill="#1B2A2F"/></svg>
+</a>
+
+<script>
+(function(){
+  var burger = document.getElementById('burgerBtn');
+  var navLinks = document.getElementById('navLinks');
+  var overlay = document.getElementById('navOverlay');
+  if(!burger || !navLinks || !overlay) return;
+  function closeMenu(){
+    burger.classList.remove('active');
+    navLinks.classList.remove('open');
+    overlay.classList.remove('show');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  function openMenu(){
+    burger.classList.add('active');
+    navLinks.classList.add('open');
+    overlay.classList.add('show');
+    burger.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  burger.addEventListener('click', function(){
+    navLinks.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  overlay.addEventListener('click', closeMenu);
+  navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 860) closeMenu(); });
+})();
+</script>
+</body>
+</html>
