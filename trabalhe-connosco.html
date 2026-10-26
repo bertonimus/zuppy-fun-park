@@ -624,6 +624,24 @@ nav{border-bottom-color:var(--ink);}
 footer{background:#F3E8F5;}
 footer .footer-col h4{color:var(--purple-dark);}
 </style>
+<style>
+/* Melhorias visuais exclusivas da página Trabalhe Connosco */
+.page-hero{max-width:900px;text-align:center;padding-top:76px;padding-bottom:36px;}
+.page-hero h1{max-width:19ch;margin:16px auto 0;}
+.page-hero p{max-width:65ch;margin:20px auto 0;}
+.jobs-grid{align-items:stretch;gap:24px;}
+.job-card{display:flex;flex-direction:column;min-height:245px;box-shadow:5px 5px 0 var(--ink);transition:transform .2s ease,box-shadow .2s ease;}
+.job-card:hover{transform:translateY(-4px);box-shadow:5px 9px 0 var(--ink);}
+.job-card .tag2{margin-top:auto;align-self:flex-start;}
+.perks-strip{background:rgba(255,255,255,.55);border:2px solid var(--ink);border-radius:24px;padding:24px;gap:18px;margin-bottom:58px;}
+.perk{text-align:center;}
+.form-box{box-shadow:7px 7px 0 var(--ink);padding:clamp(24px,4vw,42px);}
+.form-box h3{font-size:1.8rem;}
+.form-box input:focus-visible,.form-box textarea:focus-visible{outline:3px solid var(--pink);outline-offset:2px;}
+.form-box .submit-btn{background:var(--yellow);color:var(--ink);}
+.form-box .submit-btn:hover{background:var(--tangerine);}
+@media(max-width:860px){.page-hero{padding-top:44px}.job-card{min-height:0}.perks-strip{margin-bottom:32px}}
+</style>
 </head>
 <body>
 <nav>
@@ -647,6 +665,7 @@ footer .footer-col h4{color:var(--purple-dark);}
   <p>Procuramos pessoas bem-dispostas, com energia para trabalhar com crianças e famílias. Envia-nos o teu currículo — mesmo que não haja vaga aberta agora, guardamos para o futuro.</p>
 </section>
 <section class="wrap">
+  <div class="section-head" style="text-align:center;margin:0 auto 30px;"><span class="tag">Oportunidades</span><h2>Onde podes fazer a diferença</h2></div>
   <div class="jobs-grid">
     <div class="job-card">
       <div class="ic">🤸</div>
@@ -669,6 +688,7 @@ footer .footer-col h4{color:var(--purple-dark);}
   </div>
 </section>
 <section class="wrap">
+  <div class="section-head" style="text-align:center;margin:0 auto 26px;"><span class="tag">A nossa equipa</span><h2>O que torna o Zuppy especial</h2></div>
   <div class="perks-strip">
     <div class="perk"><div class="pe-ic">😄</div><p>Ambiente bem-disposto</p></div>
     <div class="perk"><div class="pe-ic">🗓️</div><p>Horários flexíveis</p></div>
@@ -707,10 +727,10 @@ footer .footer-col h4{color:var(--purple-dark);}
         <div class="field">
           <label for="jcv">Currículo (PDF)</label>
           <input type="file" id="jcv" accept=".pdf,.doc,.docx">
-          <p class="file-note">Ao submeteres, vamos abrir o teu email com os dados preenchidos — não te esqueças de anexar aqui o ficheiro antes de enviares.</p>
+          <p class="file-note">Ao clicares em Enviar candidatura, abre-se o teu programa de email. O ficheiro escolhido aqui não é anexado automaticamente: anexa o currículo ao email antes de o enviares.</p>
         </div>
         <button type="submit" class="submit-btn">Enviar candidatura</button>
-        <div class="success-msg" id="successMsg">A abrir o teu email com a candidatura preenchida — confirma que anexaste o CV antes de enviar. 🎉</div>
+        <div class="success-msg" id="successMsg">A abrir o teu programa de email. Anexa o CV e envia a mensagem para concluir a candidatura.</div>
       </form>
     </div>
   </div>
