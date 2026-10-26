@@ -9,20 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FFF8F0;
-    --cream-2:#FFE9D6;
-    --ink:#303047;
-    --tangerine:#F5A45D;
-    --tangerine-dark:#C56C2A;
-    --teal:#BCE8A0;
-    --teal-dark:#396C35;
-    --yellow:#FFE08A;
-    --pink:#F8BBD9;
-    --purple:#CDB9F4;
-    --blue:#A9DDF5;
-    --purple-dark:#69518D;
-    --pink-dark:#9B3D6C;
-    --blue-dark:#28678C;
+    --cream:#FFFCF8;
+    --cream-2:#FFF3E8;
+    --ink:#41465B;
+    --tangerine:#FFD1A8;
+    --tangerine-dark:#8D4E22;
+    --teal:#DDF3D2;
+    --teal-dark:#356B48;
+    --yellow:#FFF1B9;
+    --pink:#FCE0ED;
+    --purple:#E9DFF9;
+    --blue:#DDF2FF;
+    --purple-dark:#655184;
+    --pink-dark:#934467;
+    --blue-dark:#315D82;
     --white:#FFFFFF;
     --max: 1160px;
   }
@@ -55,14 +55,14 @@
     position:sticky;top:0;z-index:50;
     background:#FFFFFF;
     backdrop-filter:blur(8px);
-    border-bottom:2px solid #26243E;
+    border-bottom:2px solid #41465B;
   }
   .nav-inner{
     max-width:var(--max);margin:0 auto;padding:14px 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
   .wordmark{font-size:1.5rem;color:var(--tangerine);letter-spacing:-0.5px;}
-  .wordmark span{color:var(--teal);}
+  .wordmark span{color:var(--teal-dark);}
   .nav-links{display:flex;gap:28px;font-weight:600;font-size:0.95rem;list-style:none;margin:0;padding:0;}
   .nav-links a{text-decoration:none;position:relative;}
   .nav-links a::after{
@@ -71,7 +71,7 @@
   }
   .nav-links a:hover::after{width:100%;}
   .nav-cta{
-    background:var(--tangerine);color:var(--white);
+    background:var(--tangerine);color:var(--ink);
     padding:10px 20px;border-radius:100px;font-weight:700;
     text-decoration:none;font-size:0.9rem;
     box-shadow:3px 3px 0 var(--ink);
@@ -109,7 +109,7 @@
   }
   .hero-ctas{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;}
   .btn-primary{
-    background:var(--tangerine);color:var(--white);
+    background:var(--tangerine);color:var(--ink);
     padding:16px 30px;border-radius:100px;font-weight:700;
     text-decoration:none;font-size:1.05rem;
     border:2px solid var(--ink);
@@ -160,8 +160,7 @@
   .stats{
     border-top:2px solid var(--ink);
     border-bottom:2px solid var(--ink);
-    background:var(--ink);
-    color:var(--cream);
+    background:#EAF3F7; color:var(--ink);
   }
   .stats-inner{
     max-width:var(--max);margin:0 auto;padding:0 24px;
@@ -221,13 +220,13 @@
 
   /* ---------- Parties section ---------- */
   .parties{
-    background:var(--teal);color:var(--white);
+    background:var(--teal);color:var(--ink);
     border-radius:36px;
     padding:64px 48px;
     display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
     border:2px solid var(--ink);
   }
-  .parties h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--white);}
+  .parties h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--ink);}
   .parties p{opacity:0.92;margin-top:16px;font-size:1.05rem;}
   .party-list{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;}
   .party-list li{
@@ -243,7 +242,7 @@
   .party-card{
     background:var(--cream);color:var(--ink);
     border-radius:24px;border:2px solid var(--ink);
-    padding:32px;box-shadow:6px 6px 0 var(--ink-dark, #0A5F63);
+    padding:32px;box-shadow:6px 6px 0 var(--ink-dark, #668A84);
   }
   .party-card .price{font-family:'Baloo 2',sans-serif;font-size:2.6rem;color:var(--tangerine);}
   .party-card .price span{font-size:1rem;font-family:'Inter',sans-serif;font-weight:600;color:var(--ink);opacity:0.7;}
@@ -303,18 +302,17 @@
   footer{
     border-top:2px solid var(--ink);
     padding:48px 0 32px;
-    background:var(--ink);
-    color:var(--cream);
+    background:#EDF2F8; color:var(--ink);
   }
   .footer-inner{
     display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;
   }
-  .footer-inner .wordmark{color:var(--yellow);}
-  .footer-inner .wordmark span{color:var(--tangerine);}
+  .footer-inner .wordmark{color:var(--tangerine-dark);}
+  .footer-inner .wordmark span{color:var(--teal-dark);}
   .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
-  .footer-col h4{font-family:'Baloo 2',sans-serif;font-size:1rem;margin-bottom:14px;color:var(--yellow);}
+  .footer-col h4{font-family:'Baloo 2',sans-serif;font-size:1rem;margin-bottom:14px;color:var(--tangerine-dark);}
   .footer-col a, .footer-col p{
-    display:block;text-decoration:none;color:var(--cream);opacity:0.8;
+    display:block;text-decoration:none;color:var(--ink);opacity:0.8;
     font-size:0.9rem;margin-bottom:8px;
   }
   .foot-bottom{
@@ -373,7 +371,7 @@
     font-weight:700;font-size:0.88rem;cursor:pointer;font-family:'Inter',sans-serif;
     white-space:nowrap;
   }
-  .cookie-btn.accept{background:var(--tangerine);color:var(--white);box-shadow:3px 3px 0 var(--ink);}
+  .cookie-btn.accept{background:var(--tangerine);color:var(--ink);box-shadow:3px 3px 0 var(--ink);}
   .cookie-btn.essential{background:transparent;color:var(--ink);}
   @media (max-width:640px){.cookie-inner{padding:22px;}.cookie-actions{width:100%;}.cookie-btn{flex:1;text-align:center;}}
 </style>
@@ -587,12 +585,12 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="hero-art">
       <div class="blob"></div>
       <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="100" cy="70" r="34" fill="#FFC145" stroke="#1B2A2F" stroke-width="4"/>
-        <path d="M60 110 Q100 90 140 110 L150 170 Q100 190 50 170 Z" fill="#FF5A36" stroke="#1B2A2F" stroke-width="4"/>
-        <circle cx="88" cy="66" r="5" fill="#1B2A2F"/>
-        <circle cx="112" cy="66" r="5" fill="#1B2A2F"/>
-        <path d="M85 82 Q100 92 115 82" stroke="#1B2A2F" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M70 40 Q100 10 130 40" stroke="#1B2A2F" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="100" cy="70" r="34" fill="#FFC145" stroke="#41465B" stroke-width="4"/>
+        <path d="M60 110 Q100 90 140 110 L150 170 Q100 190 50 170 Z" fill="#FF5A36" stroke="#41465B" stroke-width="4"/>
+        <circle cx="88" cy="66" r="5" fill="#41465B"/>
+        <circle cx="112" cy="66" r="5" fill="#41465B"/>
+        <path d="M85 82 Q100 92 115 82" stroke="#41465B" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M70 40 Q100 10 130 40" stroke="#41465B" stroke-width="4" fill="none" stroke-linecap="round"/>
       </svg>
       <div class="float-badge b1">+900 saltos/hora ⚡</div>
       <div class="float-badge b2">Festas a partir dos 4 anos 🎈</div>
@@ -612,14 +610,14 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
       <div class="act-visual" style="background:#FFEFDA;">
         <span class="act-num">01</span>
         <svg viewBox="0 0 200 200" fill="none">
-          <ellipse cx="100" cy="165" rx="72" ry="16" fill="#F5821F" stroke="#26243E" stroke-width="4"/>
-          <ellipse cx="100" cy="161" rx="52" ry="9" fill="#FFEFDA" stroke="#26243E" stroke-width="3"/>
-          <path d="M34 165 L20 150 M166 165 L180 150 M50 176 L40 192 M150 176 L160 192" stroke="#26243E" stroke-width="4" stroke-linecap="round"/>
-          <path d="M98 140 Q92 115 98 95" stroke="#26243E" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
-          <circle cx="100" cy="60" r="17" fill="#FFD9A8" stroke="#26243E" stroke-width="3"/>
-          <path d="M94 58 q6 5 12 0" stroke="#26243E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="94" cy="54" r="1.6" fill="#26243E"/><circle cx="106" cy="54" r="1.6" fill="#26243E"/>
-          <path d="M100 77 L100 110 M100 85 L78 70 M100 85 L122 70 M100 110 L82 138 M100 110 L118 138" stroke="#26243E" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="100" cy="165" rx="72" ry="16" fill="#F5821F" stroke="#41465B" stroke-width="4"/>
+          <ellipse cx="100" cy="161" rx="52" ry="9" fill="#FFEFDA" stroke="#41465B" stroke-width="3"/>
+          <path d="M34 165 L20 150 M166 165 L180 150 M50 176 L40 192 M150 176 L160 192" stroke="#41465B" stroke-width="4" stroke-linecap="round"/>
+          <path d="M98 140 Q92 115 98 95" stroke="#41465B" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+          <circle cx="100" cy="60" r="17" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
+          <path d="M94 58 q6 5 12 0" stroke="#41465B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="94" cy="54" r="1.6" fill="#41465B"/><circle cx="106" cy="54" r="1.6" fill="#41465B"/>
+          <path d="M100 77 L100 110 M100 85 L78 70 M100 85 L122 70 M100 110 L82 138 M100 110 L118 138" stroke="#41465B" stroke-width="5" stroke-linecap="round"/>
           <path d="M150 55 L158 48 M44 90 L35 85 M158 95 L168 92" stroke="#F5821F" stroke-width="3" stroke-linecap="round"/>
         </svg>
       </div>
@@ -634,13 +632,13 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
       <div class="act-visual" style="background:#E9F5F5;">
         <span class="act-num">02</span>
         <svg viewBox="0 0 200 200" fill="none">
-          <path d="M40 160 L40 95 Q40 80 55 80 L70 80 L70 65 Q70 55 80 55 L120 55 Q130 55 130 65 L130 80 L145 80 Q160 80 160 95 L160 160 Z" fill="#6FA82E" stroke="#26243E" stroke-width="4"/>
-          <rect x="88" y="120" width="24" height="40" rx="3" fill="#4F7A1F" stroke="#26243E" stroke-width="3"/>
-          <path d="M80 55 L80 40 L96 48 Z" fill="#FFC94D" stroke="#26243E" stroke-width="2.5"/>
-          <circle cx="62" cy="105" r="15" fill="#FFD9A8" stroke="#26243E" stroke-width="3"/>
-          <circle cx="57" cy="102" r="1.6" fill="#26243E"/><circle cx="67" cy="102" r="1.6" fill="#26243E"/>
-          <path d="M57 109 q5 4 10 0" stroke="#26243E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M62 120 L62 140 M62 126 L45 118 M62 126 L80 140" stroke="#26243E" stroke-width="5" stroke-linecap="round"/>
+          <path d="M40 160 L40 95 Q40 80 55 80 L70 80 L70 65 Q70 55 80 55 L120 55 Q130 55 130 65 L130 80 L145 80 Q160 80 160 95 L160 160 Z" fill="#6FA82E" stroke="#41465B" stroke-width="4"/>
+          <rect x="88" y="120" width="24" height="40" rx="3" fill="#4F7A1F" stroke="#41465B" stroke-width="3"/>
+          <path d="M80 55 L80 40 L96 48 Z" fill="#FFC94D" stroke="#41465B" stroke-width="2.5"/>
+          <circle cx="62" cy="105" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
+          <circle cx="57" cy="102" r="1.6" fill="#41465B"/><circle cx="67" cy="102" r="1.6" fill="#41465B"/>
+          <path d="M57 109 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M62 120 L62 140 M62 126 L45 118 M62 126 L80 140" stroke="#41465B" stroke-width="5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="act-text">
@@ -654,15 +652,15 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
       <div class="act-visual" style="background:#FFF1D6;">
         <span class="act-num">03</span>
         <svg viewBox="0 0 200 200" fill="none">
-          <rect x="20" y="130" width="160" height="34" rx="4" fill="#6FA82E" stroke="#26243E" stroke-width="4"/>
-          <path d="M150 128 L150 85 L178 85 L178 128 Z" fill="#E9F5F5" stroke="#26243E" stroke-width="3"/>
-          <path d="M150 90 L178 90 M150 100 L178 100 M150 110 L178 110 M150 120 L178 120 M158 85 L158 128 M166 85 L166 128" stroke="#26243E" stroke-width="1.4"/>
-          <circle cx="90" cy="122" r="12" fill="#FFFFFF" stroke="#26243E" stroke-width="3"/>
-          <path d="M90 114 L96 119 L94 126 L86 126 L84 119 Z" fill="#26243E"/>
-          <circle cx="55" cy="95" r="15" fill="#FFD9A8" stroke="#26243E" stroke-width="3"/>
-          <circle cx="50" cy="92" r="1.6" fill="#26243E"/><circle cx="60" cy="92" r="1.6" fill="#26243E"/>
-          <path d="M50 99 q5 4 10 0" stroke="#26243E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M55 110 L55 128 M55 116 L38 108 M55 116 L68 122 M55 128 L45 150 M55 128 L72 118" stroke="#26243E" stroke-width="5" stroke-linecap="round"/>
+          <rect x="20" y="130" width="160" height="34" rx="4" fill="#6FA82E" stroke="#41465B" stroke-width="4"/>
+          <path d="M150 128 L150 85 L178 85 L178 128 Z" fill="#E9F5F5" stroke="#41465B" stroke-width="3"/>
+          <path d="M150 90 L178 90 M150 100 L178 100 M150 110 L178 110 M150 120 L178 120 M158 85 L158 128 M166 85 L166 128" stroke="#41465B" stroke-width="1.4"/>
+          <circle cx="90" cy="122" r="12" fill="#FFFFFF" stroke="#41465B" stroke-width="3"/>
+          <path d="M90 114 L96 119 L94 126 L86 126 L84 119 Z" fill="#41465B"/>
+          <circle cx="55" cy="95" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
+          <circle cx="50" cy="92" r="1.6" fill="#41465B"/><circle cx="60" cy="92" r="1.6" fill="#41465B"/>
+          <path d="M50 99 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M55 110 L55 128 M55 116 L38 108 M55 116 L68 122 M55 128 L45 150 M55 128 L72 118" stroke="#41465B" stroke-width="5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="act-text">
@@ -676,15 +674,15 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
       <div class="act-visual" style="background:#FFE3DC;">
         <span class="act-num">04</span>
         <svg viewBox="0 0 200 200" fill="none">
-          <path d="M28 150 Q28 170 48 170 L152 170 Q172 170 172 150 L172 140 L28 140 Z" fill="#F5821F" stroke="#26243E" stroke-width="4"/>
-          <circle cx="45" cy="118" r="16" fill="#2E9BD6" stroke="#26243E" stroke-width="3.5"/>
-          <circle cx="80" cy="100" r="16" fill="#FFC94D" stroke="#26243E" stroke-width="3.5"/>
-          <circle cx="120" cy="112" r="16" fill="#E5157A" stroke="#26243E" stroke-width="3.5"/>
-          <circle cx="155" cy="128" r="16" fill="#8B4FA6" stroke="#26243E" stroke-width="3.5"/>
-          <circle cx="100" cy="135" r="15" fill="#FFD9A8" stroke="#26243E" stroke-width="3"/>
-          <circle cx="94" cy="132" r="1.6" fill="#26243E"/><circle cx="104" cy="132" r="1.6" fill="#26243E"/>
-          <path d="M94 139 q6 4 12 0" stroke="#26243E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M100 148 L92 160 M100 148 L112 157 M88 130 L70 125 M114 128 L132 122" stroke="#26243E" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M28 150 Q28 170 48 170 L152 170 Q172 170 172 150 L172 140 L28 140 Z" fill="#F5821F" stroke="#41465B" stroke-width="4"/>
+          <circle cx="45" cy="118" r="16" fill="#2E9BD6" stroke="#41465B" stroke-width="3.5"/>
+          <circle cx="80" cy="100" r="16" fill="#FFC94D" stroke="#41465B" stroke-width="3.5"/>
+          <circle cx="120" cy="112" r="16" fill="#E5157A" stroke="#41465B" stroke-width="3.5"/>
+          <circle cx="155" cy="128" r="16" fill="#8B4FA6" stroke="#41465B" stroke-width="3.5"/>
+          <circle cx="100" cy="135" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
+          <circle cx="94" cy="132" r="1.6" fill="#41465B"/><circle cx="104" cy="132" r="1.6" fill="#41465B"/>
+          <path d="M94 139 q6 4 12 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M100 148 L92 160 M100 148 L112 157 M88 130 L70 125 M114 128 L132 122" stroke="#41465B" stroke-width="4.5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="act-text">
@@ -698,14 +696,14 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
       <div class="act-visual" style="background:#E3F0FA;">
         <span class="act-num">05</span>
         <svg viewBox="0 0 200 200" fill="none">
-          <path d="M55 165 L55 50 L165 165 Z" fill="#2E9BD6" stroke="#26243E" stroke-width="4"/>
+          <path d="M55 165 L55 50 L165 165 Z" fill="#2E9BD6" stroke="#41465B" stroke-width="4"/>
           <path d="M55 50 L55 165" stroke="#FFFFFF" stroke-width="3" opacity=".5"/>
-          <path d="M40 165 L40 70 M40 70 L55 70 M40 90 L55 90 M40 110 L55 110 M40 130 L55 130 M40 150 L55 150" stroke="#26243E" stroke-width="3.5" stroke-linecap="round"/>
-          <path d="M120 100 Q105 115 112 130" stroke="#26243E" stroke-width="3" stroke-dasharray="2 6" fill="none" stroke-linecap="round"/>
-          <circle cx="135" cy="145" r="15" fill="#FFD9A8" stroke="#26243E" stroke-width="3"/>
-          <circle cx="130" cy="142" r="1.6" fill="#26243E"/><circle cx="140" cy="142" r="1.6" fill="#26243E"/>
-          <path d="M130 150 q5 4 10 0" stroke="#26243E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M135 160 L120 168 M135 160 L150 170 M122 140 L108 135 M148 138 L160 133" stroke="#26243E" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M40 165 L40 70 M40 70 L55 70 M40 90 L55 90 M40 110 L55 110 M40 130 L55 130 M40 150 L55 150" stroke="#41465B" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M120 100 Q105 115 112 130" stroke="#41465B" stroke-width="3" stroke-dasharray="2 6" fill="none" stroke-linecap="round"/>
+          <circle cx="135" cy="145" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
+          <circle cx="130" cy="142" r="1.6" fill="#41465B"/><circle cx="140" cy="142" r="1.6" fill="#41465B"/>
+          <path d="M130 150 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M135 160 L120 168 M135 160 L150 170 M122 140 L108 135 M148 138 L160 133" stroke="#41465B" stroke-width="4.5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="act-text">
@@ -720,12 +718,12 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
         <span class="act-num">06</span>
         <svg viewBox="0 0 200 200" fill="none">
           <path d="M100 25 C148 25 168 52 168 82 C168 112 142 128 115 128 C92 128 78 114 78 97 C78 83 90 73 103 73 C113 73 120 80 120 89" stroke="#8B4FA6" stroke-width="12" fill="none" stroke-linecap="round"/>
-          <path d="M100 25 C148 25 168 52 168 82 C168 112 142 128 115 128 C92 128 78 114 78 97 C78 83 90 73 103 73 C113 73 120 80 120 89" stroke="#26243E" stroke-width="16" fill="none" stroke-linecap="round" opacity="0" />
-          <ellipse cx="90" cy="165" rx="40" ry="10" fill="#FDE3F0" stroke="#26243E" stroke-width="3"/>
-          <circle cx="75" cy="150" r="15" fill="#FFD9A8" stroke="#26243E" stroke-width="3"/>
-          <circle cx="70" cy="147" r="1.6" fill="#26243E"/><circle cx="80" cy="147" r="1.6" fill="#26243E"/>
-          <path d="M70 155 q5 4 10 0" stroke="#26243E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M75 165 L62 172 M75 165 L92 172 M62 146 L48 140 M90 142 L104 136" stroke="#26243E" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M100 25 C148 25 168 52 168 82 C168 112 142 128 115 128 C92 128 78 114 78 97 C78 83 90 73 103 73 C113 73 120 80 120 89" stroke="#41465B" stroke-width="16" fill="none" stroke-linecap="round" opacity="0" />
+          <ellipse cx="90" cy="165" rx="40" ry="10" fill="#FDE3F0" stroke="#41465B" stroke-width="3"/>
+          <circle cx="75" cy="150" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
+          <circle cx="70" cy="147" r="1.6" fill="#41465B"/><circle cx="80" cy="147" r="1.6" fill="#41465B"/>
+          <path d="M70 155 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M75 165 L62 172 M75 165 L92 172 M62 146 L48 140 M90 142 L104 136" stroke="#41465B" stroke-width="4.5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="act-text">
@@ -893,7 +891,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
   font-family:'Inter',sans-serif;font-weight:700;font-size:0.9rem;
   border:2px solid var(--ink);border-radius:100px;padding:11px 20px;cursor:pointer;
 }
-.cookie-accept{background:var(--tangerine);color:var(--white);box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease;}
+.cookie-accept{background:var(--tangerine);color:var(--ink);box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease;}
 .cookie-accept:hover{transform:translate(-2px,-2px);}
 .cookie-reject{background:transparent;color:var(--ink);}
 .cookie-reject:hover{background:var(--cream-2);}
@@ -998,7 +996,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
 @media (max-width:860px){.wa-float{width:64px;height:64px;bottom:18px;right:18px;}}
 </style>
 <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20saber%20mais%20sobre%20o%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="wa-float" aria-label="Fala connosco no WhatsApp">
-  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="#1B2A2F" stroke-width="1.4"/><path d="M11.5 11.5c.3-.6.9-.6 1.3-.6h.5c.3 0 .5.1.7.6l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.1.1-.1.3 0 .5.4.8 1 1.6 1.8 2.2.7.6 1.4 1 2.1 1.3.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.2.5.3.5.6 0 1-1.3 1.9-2.2 1.9-1.7 0-3.6-.8-5-2.1-1.5-1.3-2.5-3-2.9-4.6-.2-.9.2-1.8.5-2.4Z" fill="#1B2A2F"/></svg>
+  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="#41465B" stroke-width="1.4"/><path d="M11.5 11.5c.3-.6.9-.6 1.3-.6h.5c.3 0 .5.1.7.6l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.1.1-.1.3 0 .5.4.8 1 1.6 1.8 2.2.7.6 1.4 1 2.1 1.3.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.2.5.3.5.6 0 1-1.3 1.9-2.2 1.9-1.7 0-3.6-.8-5-2.1-1.5-1.3-2.5-3-2.9-4.6-.2-.9.2-1.8.5-2.4Z" fill="#41465B"/></svg>
 </a>
 
 <script>
