@@ -55,7 +55,7 @@
     position:sticky;top:0;z-index:50;
     background:#FFFFFF;
     backdrop-filter:blur(8px);
-    border-bottom:2px solid #41465B;
+    border-bottom:2px solid var(--ink);
   }
   .nav-inner{
     max-width:var(--max);margin:0 auto;padding:14px 24px;
@@ -160,7 +160,7 @@
   .stats{
     border-top:2px solid var(--ink);
     border-bottom:2px solid var(--ink);
-    background:#EAF3F7; color:var(--ink);
+    background:#EAF4D9; color:var(--ink);
   }
   .stats-inner{
     max-width:var(--max);margin:0 auto;padding:0 24px;
@@ -302,7 +302,7 @@
   footer{
     border-top:2px solid var(--ink);
     padding:48px 0 32px;
-    background:#EDF2F8; color:var(--ink);
+    background:#F3E8F5; color:var(--ink);
   }
   .footer-inner{
     display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;
@@ -394,10 +394,10 @@
 footer .logo-img{height:38px;}
 @media (max-width:860px){.logo-img{height:38px;}}
 
-.act-card:nth-of-type(4n+1) .ic{background:#FFE7B3;}
-.act-card:nth-of-type(4n+2) .ic{background:#C9E8F7;}
-.act-card:nth-of-type(4n+3) .ic{background:#DCF0BE;}
-.act-card:nth-of-type(4n+4) .ic{background:#F8CBE6;}
+.act-card:nth-of-type(4n+1) .ic{background:#F6CB32;}
+.act-card:nth-of-type(4n+2) .ic{background:#278FC5;}
+.act-card:nth-of-type(4n+3) .ic{background:#83B72F;}
+.act-card:nth-of-type(4n+4) .ic{background:#E62683;}
 
 .value-card:nth-of-type(3n+1) .num{color:var(--blue);}
 .value-card:nth-of-type(3n+2) .num{color:var(--pink);}
@@ -531,6 +531,19 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
   .reveal{opacity:1;transform:none;transition:none;}
   .eyebrow-free, .float-badge, .blob{animation:none;}
 }
+</style>
+<style>
+/* Cores do logótipo Zuppy: destaques visíveis, mantendo o desenho da página */
+nav{border-bottom-color:var(--ink);}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--blue);}
+.section-head .tag,.page-hero .tag{color:var(--pink-dark);}
+.btn-primary,.nav-cta{background:var(--yellow);}
+.btn-primary:hover,.nav-cta:hover{background:var(--tangerine);}
+.hero h1 em{color:var(--pink);-webkit-text-stroke:1px var(--ink);paint-order:stroke fill;}
+.float-badge.b1{color:var(--blue-dark);}
+.float-badge.b2{color:var(--pink-dark);}
+footer{background:#F3E8F5;}
+footer .footer-col h4{color:var(--purple-dark);}
 </style>
 </head>
 <body>
