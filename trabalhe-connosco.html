@@ -9,20 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FFF8F0;
-    --cream-2:#FFE9D6;
-    --ink:#303047;
-    --tangerine:#F5A45D;
-    --tangerine-dark:#C56C2A;
-    --teal:#BCE8A0;
-    --teal-dark:#396C35;
-    --yellow:#FFE08A;
-    --pink:#F8BBD9;
-    --purple:#CDB9F4;
-    --blue:#A9DDF5;
-    --purple-dark:#69518D;
-    --pink-dark:#9B3D6C;
-    --blue-dark:#28678C;
+    --cream:#FFFCF8;
+    --cream-2:#FFF3E8;
+    --ink:#41465B;
+    --tangerine:#FFD1A8;
+    --tangerine-dark:#8D4E22;
+    --teal:#DDF3D2;
+    --teal-dark:#356B48;
+    --yellow:#FFF1B9;
+    --pink:#FCE0ED;
+    --purple:#E9DFF9;
+    --blue:#DDF2FF;
+    --purple-dark:#655184;
+    --pink-dark:#934467;
+    --blue-dark:#315D82;
     --white:#FFFFFF;
     --max: 1160px;
   }
@@ -55,14 +55,14 @@
     position:sticky;top:0;z-index:50;
     background:#FFFFFF;
     backdrop-filter:blur(8px);
-    border-bottom:2px solid #26243E;
+    border-bottom:2px solid #41465B;
   }
   .nav-inner{
     max-width:var(--max);margin:0 auto;padding:14px 24px;
     display:flex;align-items:center;justify-content:space-between;
   }
   .wordmark{font-size:1.5rem;color:var(--pink);letter-spacing:-0.5px;}
-  .wordmark span{color:var(--teal);}
+  .wordmark span{color:var(--teal-dark);}
   .nav-links{display:flex;gap:28px;font-weight:600;font-size:0.95rem;list-style:none;margin:0;padding:0;}
   .nav-links a{text-decoration:none;position:relative;}
   .nav-links a::after{
@@ -160,8 +160,7 @@
   .stats{
     border-top:2px solid var(--ink);
     border-bottom:2px solid var(--ink);
-    background:var(--ink);
-    color:var(--cream);
+    background:#EAF3F7; color:var(--ink);
   }
   .stats-inner{
     max-width:var(--max);margin:0 auto;padding:0 24px;
@@ -221,13 +220,13 @@
 
   /* ---------- Parties section ---------- */
   .parties{
-    background:var(--teal);color:var(--white);
+    background:var(--teal);color:var(--ink);
     border-radius:36px;
     padding:64px 48px;
     display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
     border:2px solid var(--ink);
   }
-  .parties h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--white);}
+  .parties h2{font-size:clamp(1.9rem,3vw,2.5rem);color:var(--ink);}
   .parties p{opacity:0.92;margin-top:16px;font-size:1.05rem;}
   .party-list{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;}
   .party-list li{
@@ -243,7 +242,7 @@
   .party-card{
     background:var(--cream);color:var(--ink);
     border-radius:24px;border:2px solid var(--ink);
-    padding:32px;box-shadow:6px 6px 0 var(--ink-dark, #0A5F63);
+    padding:32px;box-shadow:6px 6px 0 var(--ink-dark, #668A84);
   }
   .party-card .price{font-family:'Baloo 2',sans-serif;font-size:2.6rem;color:var(--pink);}
   .party-card .price span{font-size:1rem;font-family:'Inter',sans-serif;font-weight:600;color:var(--ink);opacity:0.7;}
@@ -303,18 +302,17 @@
   footer{
     border-top:2px solid var(--ink);
     padding:48px 0 32px;
-    background:var(--ink);
-    color:var(--cream);
+    background:#EDF2F8; color:var(--ink);
   }
   .footer-inner{
     display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;
   }
-  .footer-inner .wordmark{color:var(--yellow);}
+  .footer-inner .wordmark{color:var(--tangerine-dark);}
   .footer-inner .wordmark span{color:var(--pink);}
   .footer-cols{display:flex;gap:64px;flex-wrap:wrap;}
-  .footer-col h4{font-family:'Baloo 2',sans-serif;font-size:1rem;margin-bottom:14px;color:var(--yellow);}
+  .footer-col h4{font-family:'Baloo 2',sans-serif;font-size:1rem;margin-bottom:14px;color:var(--tangerine-dark);}
   .footer-col a, .footer-col p{
-    display:block;text-decoration:none;color:var(--cream);opacity:0.8;
+    display:block;text-decoration:none;color:var(--ink);opacity:0.8;
     font-size:0.9rem;margin-bottom:8px;
   }
   .foot-bottom{
@@ -389,7 +387,7 @@
 }
 .submit-btn:hover{transform:translate(-2px,-2px);}
 .success-msg{
-  display:none;background:var(--teal);color:var(--white);padding:16px 20px;
+  display:none;background:var(--teal);color:var(--ink);padding:16px 20px;
   border-radius:14px;border:2px solid var(--ink);margin-top:16px;font-weight:600;
 }
 .success-msg.show{display:block;}
@@ -759,7 +757,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
 @media (max-width:860px){.wa-float{width:64px;height:64px;bottom:18px;right:18px;}}
 </style>
 <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20saber%20mais%20sobre%20o%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="wa-float" aria-label="Fala connosco no WhatsApp">
-  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="#1B2A2F" stroke-width="1.4"/><path d="M11.5 11.5c.3-.6.9-.6 1.3-.6h.5c.3 0 .5.1.7.6l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.1.1-.1.3 0 .5.4.8 1 1.6 1.8 2.2.7.6 1.4 1 2.1 1.3.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.2.5.3.5.6 0 1-1.3 1.9-2.2 1.9-1.7 0-3.6-.8-5-2.1-1.5-1.3-2.5-3-2.9-4.6-.2-.9.2-1.8.5-2.4Z" fill="#1B2A2F"/></svg>
+  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="#41465B" stroke-width="1.4"/><path d="M11.5 11.5c.3-.6.9-.6 1.3-.6h.5c.3 0 .5.1.7.6l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.1.1-.1.3 0 .5.4.8 1 1.6 1.8 2.2.7.6 1.4 1 2.1 1.3.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.2.5.3.5.6 0 1-1.3 1.9-2.2 1.9-1.7 0-3.6-.8-5-2.1-1.5-1.3-2.5-3-2.9-4.6-.2-.9.2-1.8.5-2.4Z" fill="#41465B"/></svg>
 </a>
 
 <style>
