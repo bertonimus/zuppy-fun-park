@@ -575,6 +575,20 @@ nav{border-bottom-color:var(--ink);}
 footer{background:#F3E8F5;}
 footer .footer-col h4{color:var(--purple-dark);}
 </style>
+<style>
+/* Galeria horizontal da página inicial */
+.zuppy-gallery{position:relative;max-width:900px;margin:0 auto;}
+.gallery-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border:2px solid var(--ink);border-radius:26px;background:var(--white);}
+.gallery-track::-webkit-scrollbar{display:none;}
+.gallery-slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:16/9;}
+.gallery-slide img{display:block;width:100%;height:100%;object-fit:cover;}
+.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:var(--yellow);color:var(--ink);font-size:22px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);}
+.gallery-prev{left:12px}.gallery-next{right:12px}
+.gallery-arrow:hover{background:var(--tangerine)}
+.gallery-arrow:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.gallery-count{text-align:center;font-weight:700;margin-top:14px;}
+@media(max-width:600px){.gallery-arrow{width:38px;height:38px;font-size:18px}.gallery-slide{aspect-ratio:4/3}}
+</style>
 </head>
 <body>
 
@@ -613,6 +627,24 @@ footer .footer-col h4{color:var(--purple-dark);}
     </div>
   </div>
 </header>
+
+
+<section class="section" id="galeria" aria-label="Galeria de fotografias">
+  <div class="wrap">
+    <div class="section-head"><span class="tag">Galeria</span><h2>Explora as fotografias</h2></div>
+    <div class="zuppy-gallery" aria-roledescription="carrossel">
+      <button class="gallery-arrow gallery-prev" type="button" aria-label="Fotografia anterior">❮</button>
+      <div class="gallery-track" tabindex="0">
+        <div class="gallery-slide"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ball%20pit%20with%20playground%20slide.jpg?width=960" alt="Fotografia ilustrativa 1 de um espaço de diversão infantil" loading="lazy"></div>
+        <div class="gallery-slide"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sky%20Zone%20Trampoline%20Park%2C%20Lakeland%2C%20Florida.jpg?width=960" alt="Fotografia ilustrativa 2 de um espaço de diversão infantil" loading="lazy"></div>
+        <div class="gallery-slide"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/DFC%200843%20Kids%20inflatable%20play%20area%20with%20penguin%20and%20pig%20characters%20bright%20slides%20and%20bouncy%20obstacles%20on%20a%20checkerboard%20floor.jpg?width=960" alt="Fotografia ilustrativa 3 de um espaço de diversão infantil" loading="lazy"></div>
+        <div class="gallery-slide"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Children%20enjoy%20playtime%20in%20a%20colorful%20ball%20pit%20with%20slides%20during%20a%20fun%20indoor%20activity%20at%20a%20play%20center.jpg?width=960" alt="Fotografia ilustrativa 4 de um espaço de diversão infantil" loading="lazy"></div>
+      </div>
+      <button class="gallery-arrow gallery-next" type="button" aria-label="Fotografia seguinte">❯</button>
+    </div>
+    <p class="gallery-count" aria-live="polite">1 / 4</p>
+  </div>
+</section>
 
 <section class="section" id="atividades">
   <div class="wrap">
@@ -961,5 +993,21 @@ footer .footer-col h4{color:var(--purple-dark);}
   window.addEventListener('resize', function(){ if(window.innerWidth > 860) closeMenu(); });
 })();
 </script>
+
+<script>
+(function(){
+ const gallery=document.querySelector('.zuppy-gallery');if(!gallery)return;
+ const track=gallery.querySelector('.gallery-track');
+ const slides=[...gallery.querySelectorAll('.gallery-slide')];
+ const counter=document.querySelector('.gallery-count');
+ function current(){return Math.max(0,Math.min(slides.length-1,Math.round(track.scrollLeft/track.clientWidth)));}
+ function go(delta){const target=(current()+delta+slides.length)%slides.length;track.scrollTo({left:slides[target].offsetLeft-slides[0].offsetLeft,behavior:'smooth'});}
+ gallery.querySelector('.gallery-prev').addEventListener('click',()=>go(-1));
+ gallery.querySelector('.gallery-next').addEventListener('click',()=>go(1));
+ track.addEventListener('scroll',()=>{counter.textContent=(current()+1)+' / '+slides.length;},{passive:true});
+ track.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}});
+})();
+</script>
+
 </body>
 </html>
