@@ -552,6 +552,16 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
 }
 </style>
 
+<style>
+/* Fotografias ilustrativas: mantêm a estrutura original */
+.hero-art .blob{background:#DDF3D2;}
+.hero-photo{position:relative;width:88%;height:88%;object-fit:cover;border-radius:50%;border:3px solid var(--ink);box-shadow:8px 8px 0 rgba(65,70,91,.13);}
+.act-visual .activity-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.act-visual .act-num{z-index:2;}
+.hero-art .float-badge{z-index:3;}
+.photo-credit{font-size:.72rem;opacity:.75;margin-top:18px;line-height:1.5;}
+.photo-credit a{text-decoration:underline;}
+</style>
 </head>
 <body>
 
@@ -584,14 +594,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     </div>
     <div class="hero-art">
       <div class="blob"></div>
-      <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="100" cy="70" r="34" fill="#FFC145" stroke="#41465B" stroke-width="4"/>
-        <path d="M60 110 Q100 90 140 110 L150 170 Q100 190 50 170 Z" fill="#FF5A36" stroke="#41465B" stroke-width="4"/>
-        <circle cx="88" cy="66" r="5" fill="#41465B"/>
-        <circle cx="112" cy="66" r="5" fill="#41465B"/>
-        <path d="M85 82 Q100 92 115 82" stroke="#41465B" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M70 40 Q100 10 130 40" stroke="#41465B" stroke-width="4" fill="none" stroke-linecap="round"/>
-      </svg>
+      <img class="hero-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ball%20pit%20with%20playground%20slide.jpg?width=960" alt="Imagem ilustrativa de escorregas e piscina de bolas num parque infantil" loading="eager">
       <div class="float-badge b1">+900 saltos/hora ⚡</div>
       <div class="float-badge b2">Festas a partir dos 4 anos 🎈</div>
     </div>
@@ -609,17 +612,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="activity-row">
       <div class="act-visual" style="background:#FFEFDA;">
         <span class="act-num">01</span>
-        <svg viewBox="0 0 200 200" fill="none">
-          <ellipse cx="100" cy="165" rx="72" ry="16" fill="#F5821F" stroke="#41465B" stroke-width="4"/>
-          <ellipse cx="100" cy="161" rx="52" ry="9" fill="#FFEFDA" stroke="#41465B" stroke-width="3"/>
-          <path d="M34 165 L20 150 M166 165 L180 150 M50 176 L40 192 M150 176 L160 192" stroke="#41465B" stroke-width="4" stroke-linecap="round"/>
-          <path d="M98 140 Q92 115 98 95" stroke="#41465B" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
-          <circle cx="100" cy="60" r="17" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
-          <path d="M94 58 q6 5 12 0" stroke="#41465B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <circle cx="94" cy="54" r="1.6" fill="#41465B"/><circle cx="106" cy="54" r="1.6" fill="#41465B"/>
-          <path d="M100 77 L100 110 M100 85 L78 70 M100 85 L122 70 M100 110 L82 138 M100 110 L118 138" stroke="#41465B" stroke-width="5" stroke-linecap="round"/>
-          <path d="M150 55 L158 48 M44 90 L35 85 M158 95 L168 92" stroke="#F5821F" stroke-width="3" stroke-linecap="round"/>
-        </svg>
+        <img class="activity-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sky%20Zone%20Trampoline%20Park%2C%20Lakeland%2C%20Florida.jpg?width=960" alt="Fotografia ilustrativa da atração" loading="lazy">
       </div>
       <div class="act-text">
         <h3>Trampolins</h3>
@@ -631,15 +624,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="activity-row">
       <div class="act-visual" style="background:#E9F5F5;">
         <span class="act-num">02</span>
-        <svg viewBox="0 0 200 200" fill="none">
-          <path d="M40 160 L40 95 Q40 80 55 80 L70 80 L70 65 Q70 55 80 55 L120 55 Q130 55 130 65 L130 80 L145 80 Q160 80 160 95 L160 160 Z" fill="#6FA82E" stroke="#41465B" stroke-width="4"/>
-          <rect x="88" y="120" width="24" height="40" rx="3" fill="#4F7A1F" stroke="#41465B" stroke-width="3"/>
-          <path d="M80 55 L80 40 L96 48 Z" fill="#FFC94D" stroke="#41465B" stroke-width="2.5"/>
-          <circle cx="62" cy="105" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
-          <circle cx="57" cy="102" r="1.6" fill="#41465B"/><circle cx="67" cy="102" r="1.6" fill="#41465B"/>
-          <path d="M57 109 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M62 120 L62 140 M62 126 L45 118 M62 126 L80 140" stroke="#41465B" stroke-width="5" stroke-linecap="round"/>
-        </svg>
+        <img class="activity-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/DFC%200843%20Kids%20inflatable%20play%20area%20with%20penguin%20and%20pig%20characters%20bright%20slides%20and%20bouncy%20obstacles%20on%20a%20checkerboard%20floor.jpg?width=960" alt="Fotografia ilustrativa da atração" loading="lazy">
       </div>
       <div class="act-text">
         <h3>Insuflável Gigante</h3>
@@ -651,17 +636,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="activity-row">
       <div class="act-visual" style="background:#FFF1D6;">
         <span class="act-num">03</span>
-        <svg viewBox="0 0 200 200" fill="none">
-          <rect x="20" y="130" width="160" height="34" rx="4" fill="#6FA82E" stroke="#41465B" stroke-width="4"/>
-          <path d="M150 128 L150 85 L178 85 L178 128 Z" fill="#E9F5F5" stroke="#41465B" stroke-width="3"/>
-          <path d="M150 90 L178 90 M150 100 L178 100 M150 110 L178 110 M150 120 L178 120 M158 85 L158 128 M166 85 L166 128" stroke="#41465B" stroke-width="1.4"/>
-          <circle cx="90" cy="122" r="12" fill="#FFFFFF" stroke="#41465B" stroke-width="3"/>
-          <path d="M90 114 L96 119 L94 126 L86 126 L84 119 Z" fill="#41465B"/>
-          <circle cx="55" cy="95" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
-          <circle cx="50" cy="92" r="1.6" fill="#41465B"/><circle cx="60" cy="92" r="1.6" fill="#41465B"/>
-          <path d="M50 99 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M55 110 L55 128 M55 116 L38 108 M55 116 L68 122 M55 128 L45 150 M55 128 L72 118" stroke="#41465B" stroke-width="5" stroke-linecap="round"/>
-        </svg>
+        <img class="activity-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ball%20pit%20with%20playground%20slide.jpg?width=960" alt="Fotografia ilustrativa da atração" loading="lazy">
       </div>
       <div class="act-text">
         <h3>Campo de Futebol</h3>
@@ -673,17 +648,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="activity-row">
       <div class="act-visual" style="background:#FFE3DC;">
         <span class="act-num">04</span>
-        <svg viewBox="0 0 200 200" fill="none">
-          <path d="M28 150 Q28 170 48 170 L152 170 Q172 170 172 150 L172 140 L28 140 Z" fill="#F5821F" stroke="#41465B" stroke-width="4"/>
-          <circle cx="45" cy="118" r="16" fill="#2E9BD6" stroke="#41465B" stroke-width="3.5"/>
-          <circle cx="80" cy="100" r="16" fill="#FFC94D" stroke="#41465B" stroke-width="3.5"/>
-          <circle cx="120" cy="112" r="16" fill="#E5157A" stroke="#41465B" stroke-width="3.5"/>
-          <circle cx="155" cy="128" r="16" fill="#8B4FA6" stroke="#41465B" stroke-width="3.5"/>
-          <circle cx="100" cy="135" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
-          <circle cx="94" cy="132" r="1.6" fill="#41465B"/><circle cx="104" cy="132" r="1.6" fill="#41465B"/>
-          <path d="M94 139 q6 4 12 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M100 148 L92 160 M100 148 L112 157 M88 130 L70 125 M114 128 L132 122" stroke="#41465B" stroke-width="4.5" stroke-linecap="round"/>
-        </svg>
+        <img class="activity-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Children%20enjoy%20playtime%20in%20a%20colorful%20ball%20pit%20with%20slides%20during%20a%20fun%20indoor%20activity%20at%20a%20play%20center.jpg?width=960" alt="Fotografia ilustrativa da atração" loading="lazy">
       </div>
       <div class="act-text">
         <h3>Piscina de Bolas</h3>
@@ -695,16 +660,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="activity-row">
       <div class="act-visual" style="background:#E3F0FA;">
         <span class="act-num">05</span>
-        <svg viewBox="0 0 200 200" fill="none">
-          <path d="M55 165 L55 50 L165 165 Z" fill="#2E9BD6" stroke="#41465B" stroke-width="4"/>
-          <path d="M55 50 L55 165" stroke="#FFFFFF" stroke-width="3" opacity=".5"/>
-          <path d="M40 165 L40 70 M40 70 L55 70 M40 90 L55 90 M40 110 L55 110 M40 130 L55 130 M40 150 L55 150" stroke="#41465B" stroke-width="3.5" stroke-linecap="round"/>
-          <path d="M120 100 Q105 115 112 130" stroke="#41465B" stroke-width="3" stroke-dasharray="2 6" fill="none" stroke-linecap="round"/>
-          <circle cx="135" cy="145" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
-          <circle cx="130" cy="142" r="1.6" fill="#41465B"/><circle cx="140" cy="142" r="1.6" fill="#41465B"/>
-          <path d="M130 150 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M135 160 L120 168 M135 160 L150 170 M122 140 L108 135 M148 138 L160 133" stroke="#41465B" stroke-width="4.5" stroke-linecap="round"/>
-        </svg>
+        <img class="activity-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ball%20pit%20with%20playground%20slide.jpg?width=960" alt="Fotografia ilustrativa da atração" loading="lazy">
       </div>
       <div class="act-text">
         <h3>Escorrega Gigante</h3>
@@ -716,15 +672,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <div class="activity-row">
       <div class="act-visual" style="background:#FDE3F0;">
         <span class="act-num">06</span>
-        <svg viewBox="0 0 200 200" fill="none">
-          <path d="M100 25 C148 25 168 52 168 82 C168 112 142 128 115 128 C92 128 78 114 78 97 C78 83 90 73 103 73 C113 73 120 80 120 89" stroke="#8B4FA6" stroke-width="12" fill="none" stroke-linecap="round"/>
-          <path d="M100 25 C148 25 168 52 168 82 C168 112 142 128 115 128 C92 128 78 114 78 97 C78 83 90 73 103 73 C113 73 120 80 120 89" stroke="#41465B" stroke-width="16" fill="none" stroke-linecap="round" opacity="0" />
-          <ellipse cx="90" cy="165" rx="40" ry="10" fill="#FDE3F0" stroke="#41465B" stroke-width="3"/>
-          <circle cx="75" cy="150" r="15" fill="#FFD9A8" stroke="#41465B" stroke-width="3"/>
-          <circle cx="70" cy="147" r="1.6" fill="#41465B"/><circle cx="80" cy="147" r="1.6" fill="#41465B"/>
-          <path d="M70 155 q5 4 10 0" stroke="#41465B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M75 165 L62 172 M75 165 L92 172 M62 146 L48 140 M90 142 L104 136" stroke="#41465B" stroke-width="4.5" stroke-linecap="round"/>
-        </svg>
+        <img class="activity-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ball%20pit%20with%20playground%20slide.jpg?width=960" alt="Fotografia ilustrativa da atração" loading="lazy">
       </div>
       <div class="act-text">
         <h3>Escorrega em Caracol</h3>
@@ -836,6 +784,7 @@ nav.scrolled{box-shadow:0 4px 0 var(--ink);}
     <span>© 2026 Zuppy Fun Park — Coimbra</span>
     <span>Feito com saltos e confetes 🎉</span>
   </div>
+<div class="wrap photo-credit">Imagens ilustrativas de espaços de diversão de terceiros, não fotografias do Zuppy Fun Park. Fotografias: <a href="https://commons.wikimedia.org/wiki/File:Ball_pit_with_playground_slide.jpg">Ball pit with playground slide</a>, <a href="https://commons.wikimedia.org/wiki/File:Sky_Zone_Trampoline_Park,_Lakeland,_Florida.jpg">Sky Zone</a>, <a href="https://commons.wikimedia.org/wiki/File:DFC_0843_Kids_inflatable_play_area_with_penguin_and_pig_characters_bright_slides_and_bouncy_obstacles_on_a_checkerboard_floor.jpg">PattayaPatrol</a> e <a href="https://commons.wikimedia.org/wiki/File:Children_enjoy_playtime_in_a_colorful_ball_pit_with_slides_during_a_fun_indoor_activity_at_a_play_center.jpg">Shixart1985</a>, via Wikimedia Commons, sob licenças Creative Commons indicadas nas respetivas páginas.</div>
 </footer>
 
 <div class="cookie-banner" id="cookieBanner">
