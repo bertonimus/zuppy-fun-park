@@ -616,6 +616,22 @@ footer .footer-col h4{color:var(--purple-dark);}
   .zuppy-party-times ul,.zuppy-lanche-list{grid-template-columns:minmax(0,1fr);}
 }
 </style>
+<style>
+/* Tipografia mais compacta apenas em telemóveis */
+@media (max-width:600px){
+  body{font-size:14px;line-height:1.42;}
+  h1,.page-hero h1{font-size:clamp(1.7rem,7vw,2.15rem)!important;line-height:1.12;}
+  h2,.section-head h2{font-size:clamp(1.45rem,6vw,1.85rem)!important;line-height:1.15;}
+  h3{font-size:1.15rem;line-height:1.2;}
+  p,li{line-height:1.42;}
+  .page-hero p,.hero p,.hero-sub,.section-head p{font-size:.9rem!important;}
+  .pkg-card h3,.party-card h3{font-size:1.15rem;}
+  .pkg-card .price,.party-card .price{font-size:1.9rem;}
+  .zuppy-lanche-list li,.zuppy-party-times li{font-size:.85rem;}
+  .faq-q,.faq-a{font-size:.9rem;}
+  .field label,.file-note{font-size:.85rem;}
+}
+</style>
 </head>
 <body>
 
