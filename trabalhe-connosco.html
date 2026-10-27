@@ -701,37 +701,39 @@ footer .footer-col h4{color:var(--purple-dark);}
   <div class="contact-grid" style="grid-template-columns:1fr;max-width:640px;margin:0 auto;">
     <div class="form-box">
       <h3>Candidata-te</h3>
-      <p style="margin:-8px 0 20px;font-size:0.9rem;opacity:0.8;">Se achas que o teu currículo fala por si, também podes mandá-lo diretamente para <a href="mailto:Zuppyfunpark@gmail.com" style="color:var(--pink-dark);font-weight:700;">Zuppyfunpark@gmail.com</a> — sem precisares de preencher o formulário.</p>
-      <form id="jobForm" novalidate>
+      <p style="margin:-8px 0 20px;font-size:0.9rem;opacity:0.8;">Podes preencher o formulário para enviar a candidatura diretamente. Se preferires, também podes enviar o currículo para <a href="mailto:Zuppyfunpark@gmail.com" style="color:var(--pink-dark);font-weight:700;">Zuppyfunpark@gmail.com</a>.</p>
+      <form id="jobForm" action="https://formsubmit.co/Zuppyfunpark@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="Nova candidatura — Zuppy Fun Park">
+        <input type="hidden" name="_template" value="table">
         <div class="form-grid-2" style="margin-bottom:18px;">
           <div class="field" id="fname" style="margin-bottom:0;">
             <label for="jname">Nome</label>
-            <input type="text" id="jname" placeholder="O teu nome completo">
+            <input type="text" id="jname" name="name" required minlength="2" placeholder="O teu nome completo">
             <span class="err">Escreve o teu nome.</span>
           </div>
           <div class="field" id="femail" style="margin-bottom:0;">
             <label for="jemail">Email</label>
-            <input type="email" id="jemail" placeholder="tu@email.com">
+            <input type="email" id="jemail" name="email" required placeholder="tu@email.com">
             <span class="err">Escreve um email válido.</span>
           </div>
         </div>
         <div class="field" id="fphone">
           <label for="jphone">Telefone</label>
-          <input type="tel" id="jphone" placeholder="9xx xxx xxx">
+          <input type="tel" id="jphone" name="phone" required minlength="9" placeholder="9xx xxx xxx">
           <span class="err">Escreve um número de telefone.</span>
         </div>
         <div class="field" id="fmsg">
           <label for="jmessage">Mensagem</label>
-          <textarea id="jmessage" placeholder="Conta-nos um pouco sobre ti..."></textarea>
+          <textarea id="jmessage" name="message" required minlength="5" placeholder="Conta-nos um pouco sobre ti..."></textarea>
           <span class="err">Escreve uma breve mensagem.</span>
         </div>
         <div class="field">
           <label for="jcv">Currículo (PDF)</label>
-          <input type="file" id="jcv" accept=".pdf,.doc,.docx">
-          <p class="file-note">Ao clicares em Enviar candidatura, abre-se o teu programa de email. O ficheiro escolhido aqui não é anexado automaticamente: anexa o currículo ao email antes de o enviares.</p>
+          <input type="file" id="jcv" name="attachment" required accept=".pdf,.doc,.docx">
+          <p class="file-note">O currículo é enviado juntamente com a candidatura. Aceitamos PDF, DOC e DOCX, até 10 MB.</p>
         </div>
         <button type="submit" class="submit-btn">Enviar candidatura</button>
-        <div class="success-msg" id="successMsg">A abrir o teu programa de email. Anexa o CV e envia a mensagem para concluir a candidatura.</div>
+        
       </form>
     </div>
   </div>
@@ -893,45 +895,7 @@ footer .footer-col h4{color:var(--purple-dark);}
   });
 })();
 </script>
-<script>
-const jobForm = document.getElementById('jobForm');
-jobForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let valid = true;
-  const name = document.getElementById('jname');
-  const email = document.getElementById('jemail');
-  const phone = document.getElementById('jphone');
-  const message = document.getElementById('jmessage');
 
-  const fname = document.getElementById('fname');
-  const femail = document.getElementById('femail');
-  const fphone = document.getElementById('fphone');
-  const fmsg = document.getElementById('fmsg');
-
-  [fname, femail, fphone, fmsg].forEach(f => f.classList.remove('invalid'));
-
-  if (name.value.trim().length < 2) { fname.classList.add('invalid'); valid = false; }
-  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-  if (!emailOk) { femail.classList.add('invalid'); valid = false; }
-  if (phone.value.trim().length < 9) { fphone.classList.add('invalid'); valid = false; }
-  if (message.value.trim().length < 5) { fmsg.classList.add('invalid'); valid = false; }
-
-  const successMsg = document.getElementById('successMsg');
-  if (!valid) { successMsg.classList.remove('show'); return; }
-
-  const subject = encodeURIComponent('Candidatura - ' + name.value.trim());
-  const body = encodeURIComponent(
-    'Nome: ' + name.value.trim() + '\n' +
-    'Email: ' + email.value.trim() + '\n' +
-    'Telefone: ' + phone.value.trim() + '\n\n' +
-    'Mensagem:\n' + message.value.trim() +
-    '\n\n[Não te esqueças de anexar o teu CV antes de enviar]'
-  );
-  window.location.href = 'mailto:Zuppyfunpark@gmail.com?subject=' + subject + '&body=' + body;
-  successMsg.classList.add('show');
-  jobForm.reset();
-});
-</script>
 <script>
 (function(){
   var burger = document.getElementById('burgerBtn');
