@@ -609,6 +609,22 @@ footer .footer-col h4{color:var(--purple-dark);}
 .zuppy-chat-choices button{font:600 .88rem 'Inter',sans-serif;color:var(--ink);background:#fff;border:2px solid var(--blue);border-radius:14px;padding:10px 13px;cursor:pointer;text-align:left;}
 .zuppy-chat-choices button:hover,.zuppy-chat-choices button:focus-visible{background:#e8f5ff;}
 .zuppy-chat-reset{margin:6px 20px 18px;background:none;border:0;color:var(--blue-dark);font:600 .85rem 'Inter',sans-serif;cursor:pointer;padding:6px 0;}
+/* Animações suaves do assistente */
+.zuppy-chat{animation:zuppyChatAppear .65s cubic-bezier(.2,.8,.2,1) both;}
+.zuppy-chat-head>span{display:inline-block;animation:zuppyChatWave 2.8s ease-in-out infinite;transform-origin:70% 75%;}
+.zuppy-chat-bubble{animation:zuppyChatMessage .35s ease-out both;}
+.zuppy-chat-choices button{transition:background .2s ease,transform .2s ease,box-shadow .2s ease;animation:zuppyChatOption .45s ease-out both;}
+.zuppy-chat-choices button:nth-child(2){animation-delay:.1s;}
+.zuppy-chat-choices button:nth-child(3){animation-delay:.2s;}
+.zuppy-chat-choices button:hover{transform:translateY(-3px);box-shadow:2px 3px 0 var(--blue);}
+.zuppy-chat-choices button:active{transform:scale(.97);box-shadow:none;}
+.zuppy-chat-reset{transition:transform .2s ease,color .2s ease;}
+.zuppy-chat-reset:hover{transform:translateX(3px);text-decoration:underline;}
+@keyframes zuppyChatAppear{from{opacity:0;transform:translateY(18px) scale(.98);}to{opacity:1;transform:translateY(0) scale(1);}}
+@keyframes zuppyChatMessage{from{opacity:0;transform:translateY(10px) scale(.96);}to{opacity:1;transform:translateY(0) scale(1);}}
+@keyframes zuppyChatOption{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+@keyframes zuppyChatWave{0%,82%,100%{transform:rotate(0);}87%{transform:rotate(-13deg);}93%{transform:rotate(11deg);}}
+@media(prefers-reduced-motion:reduce){.zuppy-chat,.zuppy-chat-head>span,.zuppy-chat-bubble,.zuppy-chat-choices button{animation:none!important;}.zuppy-chat-choices button,.zuppy-chat-reset{transition:none!important;}}
 @media(max-width:600px){.zuppy-chat{margin-bottom:40px;border-radius:18px;}.zuppy-chat-head{padding:13px 15px;}.zuppy-chat-messages{padding:14px;min-height:140px;max-height:280px;}.zuppy-chat-bubble{font-size:.86rem;padding:10px 12px;}.zuppy-chat-choices{padding:12px;gap:8px;}.zuppy-chat-choices button{width:100%;font-size:.82rem;padding:9px 11px;}.zuppy-chat-reset{margin:4px 12px 12px;}}
 </style>
 </head>
