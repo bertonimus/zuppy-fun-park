@@ -554,6 +554,14 @@ footer .footer-col h4{color:var(--purple-dark);}
 </style>
 <link rel="icon" type="image/png" href="zuppy-logo.png">
 <style>
+.pkg-grid.cols-4{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;}
+@media(max-width:860px){.pkg-grid.cols-4{grid-template-columns:1fr;}}
+.parties>.zuppy-party-times{grid-column:1/-1;background:rgba(255,255,255,.22);border-radius:22px;padding:22px 26px;}
+.zuppy-party-times h3{margin:0 0 14px;}
+.zuppy-party-times ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px;list-style:none;padding:0;margin:0;}
+.zuppy-party-times li{font-weight:700;}
+@media(max-width:680px){.zuppy-party-times ul{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:420px){.zuppy-party-times ul{grid-template-columns:1fr;}}
 /* Lanche integrado no painel verde das festas */
 .parties>.zuppy-lanche{grid-column:1/-1;}
 .zuppy-lanche{width:100%;max-width:none;margin:0;padding:clamp(24px,4vw,40px);border:2px solid var(--ink);border-radius:28px;background:#9ACFD7;box-shadow:6px 6px 0 var(--ink);}
@@ -586,7 +594,7 @@ footer .footer-col h4{color:var(--purple-dark);}
 <section class="page-hero wrap" style="padding:70px 0 20px;text-align:center;">
   <span class="eyebrow-free">Preços &amp; Festas</span>
   <h1 style="font-size:clamp(2.2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto;">Escolhe o teu tempo de salto — ou marca a festa</h1>
-  <p style="max-width:56ch;margin:16px auto 0;opacity:0.8;font-size:1.05rem;">Bilhetes por tempo de acesso, vouchers de oferta, passe mensal e o pacote de festa de aniversário — tudo numa página.</p>
+  <p style="max-width:56ch;margin:16px auto 0;opacity:0.8;font-size:1.05rem;">Bilhetes individuais e festas de aniversário — consulta os preços, horários e o lanche incluído.</p>
 </section>
 <section class="wrap">
   <div class="pkg-grid cols-4">
@@ -596,7 +604,7 @@ footer .footer-col h4{color:var(--purple-dark);}
       <div class="price">10€ <span>/ pessoa</span></div>
       <ul>
         <li>Acesso a todas as zonas</li>
-        <li>Meias antiderrapantes incluídas</li>
+        <li>Uso obrigatório de meias antiderrapantes</li>
         <li>Ideal para uma visita rápida</li>
       </ul>
       <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20reservar%20uma%20entrada%20no%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Reservar</a>
@@ -607,12 +615,18 @@ footer .footer-col h4{color:var(--purple-dark);}
       <div class="price">13€ <span>/ pessoa</span></div>
       <ul>
         <li>Acesso a todas as zonas</li>
-        <li>Meias antiderrapantes incluídas</li>
+        <li>Uso obrigatório de meias antiderrapantes</li>
         <li>Mais tempo para experimentar tudo</li>
       </ul>
       <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20reservar%20uma%20entrada%20no%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Reservar</a>
     </div>
-          </div>
+    <div class="pkg-card">
+      <span class="pill">2 horas</span><h3>Sessão 2 Horas</h3>
+      <div class="price">16€ <span>/ pessoa</span></div>
+      <ul><li>Acesso a todas as zonas</li><li>Uso obrigatório de meias antiderrapantes</li><li>2 horas de diversão</li></ul>
+      <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20reservar%20uma%20entrada%20no%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Reservar</a>
+    </div>
+  </div>
 </section>
 <section class="wrap">
   <div class="parties">
@@ -624,22 +638,26 @@ footer .footer-col h4{color:var(--purple-dark);}
         <li>Sala reservada por 2 horas e meia</li>
         <li>Acesso a todas as zonas do parque</li>
         <li>Acesso reservado ao Castelo Insuflável</li>
-        <li>Decoração temática + bolo de aniversário</li>
+        <li>Decoração temática (bolo de aniversário não incluído)</li>
         <li>Monitor de festas dedicado</li>
         <li>Convites digitais para enviar aos convidados</li>
       </ul>
     </div>
     <div class="party-card">
       <div>Festa de Aniversário Zuppy</div>
-      <div class="price">17€ <span>/ criança</span></div>
+      <div class="price">15€ <span>/ participante</span></div>
       <ul>
         <li>Duração total: 2h30</li>
-        <li>Sem mínimo de crianças</li>
+        <li>Mínimo de 15 e máximo de 35 participantes</li>
         <li>Aniversariante ganha um par de meias Zuppy 🧦</li>
       </ul>
       <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20marcar%20uma%20festa%20de%20anivers%C3%A1rio%20no%20Zuppy!" target="_blank" rel="noopener" class="btn-primary" style="display:block;text-align:center;">Pedir orçamento</a>
     </div>
-  <div class="zuppy-lanche">
+  <div class="zuppy-party-times">
+      <h3>Horários das festas de aniversário</h3>
+      <ul><li>10h00 – 12h30</li><li>10h30 – 13h00</li><li>11h00 – 13h30</li><li>15h00 – 17h30</li><li>15h30 – 18h00</li><li>16h00 – 18h30</li><li>16h30 – 19h00</li></ul>
+    </div>
+    <div class="zuppy-lanche">
       <div class="zuppy-lanche-heading">
         <span class="eyebrow-free">Festas de aniversário</span>
         <h2 id="lanche-festas-title">O lanche da festa 🍕</h2>
