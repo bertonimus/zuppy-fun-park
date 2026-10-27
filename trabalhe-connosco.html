@@ -571,14 +571,14 @@ footer .logo-img{height:38px;}
 .eyebrow-free{animation:popIn .55s cubic-bezier(.34,1.56,.64,1) both;}
 @keyframes popIn{from{opacity:0;transform:scale(.65) rotate(-3deg);}to{opacity:1;transform:scale(1) rotate(-3deg);}}
 
-.btn-primary, .btn-secondary, .nav-cta, .submit-btn, .cookie-accept, .filter-btn, .act-card, .value-card, .testi-card, .visit-card, .pkg-card{
+.btn-primary, .btn-secondary, .nav-cta, .submit-btn, .filter-btn, .act-card, .value-card, .testi-card, .visit-card, .pkg-card{
   transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, background .2s ease;
 }
-.btn-primary:hover, .nav-cta:hover, .cookie-accept:hover, .submit-btn:hover{
+.btn-primary:hover, .nav-cta:hover:hover, .submit-btn:hover{
   transform:translate(-3px,-4px) rotate(-1.5deg);
   box-shadow:7px 8px 0 var(--ink);
 }
-.btn-primary:active, .nav-cta:active, .cookie-accept:active, .submit-btn:active{
+.btn-primary:active, .nav-cta:active:active, .submit-btn:active{
   transform:translate(0,0) rotate(0);box-shadow:2px 2px 0 var(--ink);
 }
 .btn-secondary:hover{transform:translateY(-3px) rotate(1deg);}
@@ -802,7 +802,6 @@ footer .footer-col h4{color:var(--purple-dark);}
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
-        <a href="cookies.html">Política de Cookies</a>
         <a href="privacidade.html">Política de Privacidade</a>
         <a href="termos.html">Termos e Condições</a>
       </div>
@@ -838,60 +837,8 @@ footer .footer-col h4{color:var(--purple-dark);}
 <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20saber%20mais%20sobre%20o%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="wa-float" aria-label="Fala connosco no WhatsApp">
   <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="white"/><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6C11.8 27.4 13.9 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" stroke="#41465B" stroke-width="1.4"/><path d="M11.5 11.5c.3-.6.9-.6 1.3-.6h.5c.3 0 .5.1.7.6l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.1.1-.1.3 0 .5.4.8 1 1.6 1.8 2.2.7.6 1.4 1 2.1 1.3.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.2.5.3.5.6 0 1-1.3 1.9-2.2 1.9-1.7 0-3.6-.8-5-2.1-1.5-1.3-2.5-3-2.9-4.6-.2-.9.2-1.8.5-2.4Z" fill="#41465B"/></svg>
 </a>
-
-<style>
-.cookie-overlay{
-  position:fixed;inset:0;background:rgba(27,42,47,0.55);
-  display:none;align-items:center;justify-content:center;z-index:200;padding:20px;
-}
-.cookie-overlay.show{display:flex;}
-.cookie-card{
-  background:var(--cream);border:2px solid var(--ink);border-radius:26px;
-  max-width:440px;width:100%;padding:32px;box-shadow:6px 6px 0 var(--ink);
-  text-align:left;position:relative;
-}
-.cookie-card .cookie-icon{
-  width:52px;height:52px;border-radius:16px;background:var(--yellow);
-  border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;
-  font-size:1.6rem;margin-bottom:16px;
-}
-.cookie-card h3{font-family:'Baloo 2',sans-serif;font-size:1.35rem;margin:0 0 10px;}
-.cookie-card p{font-size:0.92rem;opacity:0.82;margin:0 0 22px;line-height:1.55;}
-.cookie-card p a{color:var(--teal-dark);font-weight:700;text-decoration:underline;}
-.cookie-actions{display:flex;gap:12px;flex-wrap:wrap;}
-.cookie-actions button{
-  font-family:'Inter',sans-serif;font-weight:700;font-size:0.9rem;
-  border:2px solid var(--ink);border-radius:100px;padding:11px 20px;cursor:pointer;
-}
-.cookie-accept{background:var(--pink);color:var(--white);box-shadow:3px 3px 0 var(--ink);transition:transform .15s ease;}
-.cookie-accept:hover{transform:translate(-2px,-2px);}
-.cookie-reject{background:transparent;color:var(--ink);}
-.cookie-reject:hover{background:var(--cream-2);}
-</style>
-<div class="cookie-overlay" id="cookieOverlay">
-  <div class="cookie-card">
-    <div class="cookie-icon">🫘</div>
-    <h3>Antes de saltares por aí...</h3>
-    <p>Usamos cookies essenciais para o site funcionar e cookies opcionais para perceber como o parque é visitado online. Podes ler todos os detalhes na nossa <a href="cookies.html">Política de Cookies</a>.</p>
-    <div class="cookie-actions">
-      <button class="cookie-accept" id="cookieAccept">Aceitar tudo</button>
-      <button class="cookie-reject" id="cookieReject">Só o essencial</button>
-    </div>
-  </div>
 </div>
-<script>
-(function(){
-  var overlay = document.getElementById('cookieOverlay');
-  var stored = localStorage.getItem('zuppyCookieConsent');
-  if(!stored){ overlay.classList.add('show'); }
-  function close(choice){
-    localStorage.setItem('zuppyCookieConsent', choice);
-    overlay.classList.remove('show');
-  }
-  document.getElementById('cookieAccept').addEventListener('click', function(){ close('accepted'); });
-  document.getElementById('cookieReject').addEventListener('click', function(){ close('rejected'); });
-})();
-</script>
+
 <script>
 (function(){
   var targets = document.querySelectorAll(
