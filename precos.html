@@ -574,6 +574,32 @@ footer .footer-col h4{color:var(--purple-dark);}
 @media(max-width:680px){.zuppy-lanche-list{grid-template-columns:1fr 1fr;}.zuppy-lanche{margin-bottom:45px}}
 @media(max-width:420px){.zuppy-lanche-list{grid-template-columns:1fr}}
 </style>
+<style>
+/* Ajustes de apresentação para telemóveis */
+@media (max-width:600px){
+  html{overflow-x:hidden;}
+  body{max-width:100%;overflow-x:hidden;}
+  img,video,iframe{max-width:100%;}
+  .wrap{width:calc(100% - 32px);max-width:100%;}
+  .page-hero{padding-left:0!important;padding-right:0!important;}
+  .page-hero h1{font-size:clamp(1.85rem,8vw,2.6rem)!important;overflow-wrap:break-word;}
+  .pkg-grid,.pkg-grid.cols-4,.pkg-grid.cols-2{grid-template-columns:minmax(0,1fr)!important;max-width:100%!important;margin-left:0;margin-right:0;}
+  .pkg-card,.party-card,.form-box{min-width:0;}
+  .parties{grid-template-columns:minmax(0,1fr);gap:24px;padding:26px 18px;}
+  .parties>.zuppy-party-times,.parties>.zuppy-lanche{grid-column:1/-1;min-width:0;}
+  .zuppy-party-times ul,.zuppy-lanche-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .zuppy-lanche{padding:20px 14px;box-shadow:3px 3px 0 var(--ink);}
+  .zuppy-lanche-list li{min-width:0;overflow-wrap:anywhere;padding:12px;}
+  .gallery-track{max-width:100%;}
+  .gallery-arrow{touch-action:manipulation;}
+  input,textarea,select{max-width:100%;}
+  .form-grid-2{grid-template-columns:minmax(0,1fr)!important;}
+  .submit-btn{max-width:100%;}
+}
+@media (max-width:380px){
+  .zuppy-party-times ul,.zuppy-lanche-list{grid-template-columns:minmax(0,1fr);}
+}
+</style>
 </head>
 <body>
 <nav>
