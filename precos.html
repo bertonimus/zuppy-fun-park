@@ -554,8 +554,9 @@ footer .footer-col h4{color:var(--purple-dark);}
 </style>
 <link rel="icon" type="image/png" href="zuppy-logo.png">
 <style>
-/* Lanche das festas de aniversário */
-.zuppy-lanche{max-width:900px;margin:8px auto 65px;padding:clamp(24px,5vw,48px);border:2px solid var(--ink);border-radius:28px;background:#9ACFD7;box-shadow:6px 6px 0 var(--ink);}
+/* Lanche integrado no painel verde das festas */
+.parties>.zuppy-lanche{grid-column:1/-1;}
+.zuppy-lanche{width:100%;max-width:none;margin:0;padding:clamp(24px,4vw,40px);border:2px solid var(--ink);border-radius:28px;background:#9ACFD7;box-shadow:6px 6px 0 var(--ink);}
 .zuppy-lanche-heading{text-align:center;margin-bottom:24px;}
 .zuppy-lanche-heading h2{margin:14px 0 8px;}
 .zuppy-lanche-heading p{margin:0;}
@@ -638,29 +639,28 @@ footer .footer-col h4{color:var(--purple-dark);}
       </ul>
       <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20marcar%20uma%20festa%20de%20anivers%C3%A1rio%20no%20Zuppy!" target="_blank" rel="noopener" class="btn-primary" style="display:block;text-align:center;">Pedir orçamento</a>
     </div>
-  </div>
-</section>
-<section class="wrap" aria-labelledby="lanche-festas-title">
   <div class="zuppy-lanche">
-    <div class="zuppy-lanche-heading">
-      <span class="eyebrow-free">Festas de aniversário</span>
-      <h2 id="lanche-festas-title">O lanche da festa 🍕</h2>
-      <p>O lanche está incluído na festa de aniversário.</p>
+      <div class="zuppy-lanche-heading">
+        <span class="eyebrow-free">Festas de aniversário</span>
+        <h2 id="lanche-festas-title">O lanche da festa 🍕</h2>
+        <p>O lanche está incluído na festa de aniversário.</p>
+      </div>
+      <ul class="zuppy-lanche-list">
+        <li>Pizzas 🍕</li>
+        <li>Cachorro quente 🌭</li>
+        <li>Batatas fritas 🍟</li>
+        <li>Fruta 🍊</li>
+        <li>Bolachas 🍪</li>
+        <li>Gelatinas</li>
+        <li>Pipocas 🍿</li>
+        <li>Gomas 🍬</li>
+        <li>Sumo e água</li>
+      </ul>
+      <p class="zuppy-lanche-note"><strong>Nota:</strong> O bolo de aniversário não está incluído.</p>
     </div>
-    <ul class="zuppy-lanche-list">
-      <li>Pizzas 🍕</li>
-      <li>Cachorro quente 🌭</li>
-      <li>Batatas fritas 🍟</li>
-      <li>Fruta 🍊</li>
-      <li>Bolachas 🍪</li>
-      <li>Gelatinas</li>
-      <li>Pipocas 🍿</li>
-      <li>Gomas 🍬</li>
-      <li>Sumo e água</li>
-    </ul>
-    <p class="zuppy-lanche-note"><strong>Nota:</strong> O bolo de aniversário não está incluído.</p>
   </div>
 </section>
+
 <section class="wrap">
   <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;">
     <span class="tag">Perguntas frequentes</span>
