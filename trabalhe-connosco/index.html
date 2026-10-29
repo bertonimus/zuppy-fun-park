@@ -731,7 +731,7 @@ footer .footer-col h4{color:var(--purple-dark);}
     <div class="form-box">
       <h3>Candidata-te</h3>
       <p style="margin:-8px 0 20px;font-size:0.9rem;opacity:0.8;">Podes preencher o formulário para enviar a candidatura diretamente. Se preferires, também podes enviar o currículo para <a href="mailto:Zuppyfunpark@gmail.com" style="color:var(--pink-dark);font-weight:700;">Zuppyfunpark@gmail.com</a>.</p>
-      <form id="jobForm" action="https://formsubmit.co/ajax/legotugrafia@gmail.com" method="POST" enctype="multipart/form-data">
+      <form id="jobForm" action="https://formsubmit.co/legotugrafia@gmail.com" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="Nova candidatura — Zuppy Fun Park">
         <input type="hidden" name="_template" value="table">
         <div class="form-grid-2" style="margin-bottom:18px;">
@@ -904,28 +904,16 @@ footer .footer-col h4{color:var(--purple-dark);}
 <script>
 (function(){
   const form=document.getElementById('jobForm');
-  const button=form.querySelector('button[type="submit"]');
   const status=document.getElementById('jobFormStatus');
-  form.addEventListener('submit',async function(event){
-    event.preventDefault();
-    if(!form.reportValidity())return;
+  form.addEventListener('submit',function(event){
     const file=document.getElementById('jcv').files[0];
-    if(file&&file.size>10*1024*1024){status.textContent='O currículo não pode ultrapassar 10 MB.';return;}
-    button.disabled=true;
-    button.textContent='A enviar...';
-    status.textContent='A enviar a candidatura...';
-    try{
-      const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
-      const result=await response.json();
-      if(!response.ok||result.success===false||result.success==='false')throw new Error('Envio não confirmado');
-      status.textContent='Candidatura enviada! Obrigado pelo teu interesse.';
-      form.reset();
-    }catch(error){
-      status.textContent='Não foi possível confirmar o envio. Tenta novamente ou envia o currículo por email.';
-    }finally{
-      button.disabled=false;
-      button.textContent='Enviar candidatura';
+    if(file&&file.size>10*1024*1024){
+      event.preventDefault();
+      status.textContent='O currículo não pode ultrapassar 10 MB.';
+      return;
     }
+    if(!form.reportValidity()){event.preventDefault();return;}
+    status.textContent='A abrir o serviço de envio. Poderá ser necessário confirmar o endereço de email na primeira utilização.';
   });
 })();
 </script>
