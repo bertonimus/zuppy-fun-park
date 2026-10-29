@@ -677,24 +677,26 @@ footer .footer-col h4{color:var(--purple-dark);}
     </div>
     <div class="form-box">
       <h3>Envia-nos uma mensagem</h3>
-      <form id="contactForm" novalidate>
+      <form id="contactForm" action="https://formsubmit.co/ajax/legotugrafia@gmail.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nova mensagem de contacto — Zuppy Fun Park">
+        <input type="hidden" name="_template" value="table">
         <div class="field" id="fname">
           <label for="name">Nome</label>
-          <input type="text" id="name" placeholder="O teu nome">
+          <input type="text" id="name" name="name" placeholder="O teu nome">
           <span class="err">Escreve o teu nome.</span>
         </div>
         <div class="field" id="femail">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="tu@email.com">
+          <input type="email" id="email" name="email" placeholder="tu@email.com">
           <span class="err">Escreve um email válido.</span>
         </div>
         <div class="field" id="fmsg">
           <label for="message">Mensagem</label>
-          <textarea id="message" placeholder="Conta-nos o que precisas..."></textarea>
+          <textarea id="message" name="message" placeholder="Conta-nos o que precisas..."></textarea>
           <span class="err">Escreve a tua mensagem.</span>
         </div>
         <button type="submit" class="submit-btn">Enviar mensagem</button>
-        <div class="success-msg" id="successMsg">Mensagem enviada! A nossa equipa responde em até 24 horas. 🎉</div>
+        <div class="success-msg" id="successMsg">Mensagem enviada! 🎉</div>
       </form>
     </div>
   </div>
@@ -733,7 +735,7 @@ footer .footer-col h4{color:var(--purple-dark);}
 </div>
 <script>
 const form = document.getElementById('contactForm');
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   let valid = true;
 
@@ -755,11 +757,29 @@ form.addEventListener('submit', (e) => {
   if (message.value.trim().length < 5) { msgField.classList.add('invalid'); valid = false; }
 
   const successMsg = document.getElementById('successMsg');
-  if (valid) {
+  successMsg.classList.remove('show');
+  if (!valid) return;
+
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.textContent = 'A enviar...';
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+    const result = await response.json();
+    if (!response.ok || result.success === false || result.success === 'false') throw new Error('Envio não confirmado');
+    successMsg.textContent = 'Mensagem enviada! 🎉';
     successMsg.classList.add('show');
     form.reset();
-  } else {
-    successMsg.classList.remove('show');
+  } catch (error) {
+    successMsg.textContent = 'Não foi possível confirmar o envio. Tenta novamente ou envia um email diretamente.';
+    successMsg.classList.add('show');
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Enviar mensagem';
   }
 });
 </script>
