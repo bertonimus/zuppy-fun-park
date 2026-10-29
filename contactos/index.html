@@ -677,27 +677,8 @@ footer .footer-col h4{color:var(--purple-dark);}
     </div>
     <div class="form-box">
       <h3>Envia-nos uma mensagem</h3>
-      <form id="contactForm" action="https://formsubmit.co/ajax/legotugrafia@gmail.com" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Nova mensagem de contacto — Zuppy Fun Park">
-        <input type="hidden" name="_template" value="table">
-        <div class="field" id="fname">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" placeholder="O teu nome">
-          <span class="err">Escreve o teu nome.</span>
-        </div>
-        <div class="field" id="femail">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="tu@email.com">
-          <span class="err">Escreve um email válido.</span>
-        </div>
-        <div class="field" id="fmsg">
-          <label for="message">Mensagem</label>
-          <textarea id="message" name="message" placeholder="Conta-nos o que precisas..."></textarea>
-          <span class="err">Escreve a tua mensagem.</span>
-        </div>
-        <button type="submit" class="submit-btn">Enviar mensagem</button>
-        <div class="success-msg" id="successMsg">Mensagem enviada! 🎉</div>
-      </form>
+      <iframe src="https://tally.so/embed/Z990jV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="Formulário de contacto — Zuppy Fun Park" loading="lazy" width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" style="border:0;display:block;"></iframe>
+      <p style="margin:12px 0 0;font-size:0.85rem;">Se o formulário não aparecer, <a href="https://tally.so/r/Z990jV" target="_blank" rel="noopener noreferrer" style="font-weight:700;">abre-o aqui</a>.</p>
     </div>
   </div>
 </section>
@@ -733,56 +714,7 @@ footer .footer-col h4{color:var(--purple-dark);}
   </div>
 </footer>
 </div>
-<script>
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  let valid = true;
-
-  const name = document.getElementById('name');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
-
-  const nameField = document.getElementById('fname');
-  const emailField = document.getElementById('femail');
-  const msgField = document.getElementById('fmsg');
-
-  [nameField, emailField, msgField].forEach(f => f.classList.remove('invalid'));
-
-  if (name.value.trim().length < 2) { nameField.classList.add('invalid'); valid = false; }
-
-  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-  if (!emailOk) { emailField.classList.add('invalid'); valid = false; }
-
-  if (message.value.trim().length < 5) { msgField.classList.add('invalid'); valid = false; }
-
-  const successMsg = document.getElementById('successMsg');
-  successMsg.classList.remove('show');
-  if (!valid) return;
-
-  const button = form.querySelector('button[type="submit"]');
-  button.disabled = true;
-  button.textContent = 'A enviar...';
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
-    });
-    const result = await response.json();
-    if (!response.ok || result.success === false || result.success === 'false') throw new Error('Envio não confirmado');
-    successMsg.textContent = 'Mensagem enviada! 🎉';
-    successMsg.classList.add('show');
-    form.reset();
-  } catch (error) {
-    successMsg.textContent = 'Não foi possível confirmar o envio. Tenta novamente ou envia um email diretamente.';
-    successMsg.classList.add('show');
-  } finally {
-    button.disabled = false;
-    button.textContent = 'Enviar mensagem';
-  }
-});
-</script>
+<script async src="https://tally.so/widgets/embed.js"></script>
 </div>
 
 
