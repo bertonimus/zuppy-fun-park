@@ -703,7 +703,11 @@ iframe { max-width:100%; }
 }
 </style>
 
-<style id="colored-sections-white-background">body{background:#FFFFFF;}</style>
+<style id="colored-sections-white-background">
+/* Apenas os cartões originalmente neutros recebem a cor da página; fundo geral branco. */
+body{background:#FFFFFF;}
+.pkg-card:not(.featured),.visit-card,.party-card:not(.featured),.value-card,.job-card,.perk,.form-box,.zuppy-chat,.card:not(.featured){background:#E62683;}
+</style>
 </head>
 <body>
 <nav>
