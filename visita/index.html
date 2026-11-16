@@ -709,6 +709,27 @@ nav,header,section,footer,main{position:relative;z-index:1}
   .zuppy-doodles .d2,.zuppy-doodles .d5{right:-120px;}
 }
 </style>
+
+<style>
+/* Corrige a sobreposição do menu móvel e compacta o rodapé. */
+@media (max-width:860px){
+  body > nav{z-index:1000!important;isolation:isolate;}
+  body > nav .nav-links{z-index:1002!important;background:#FFFDF7!important;box-shadow:0 8px 24px rgba(41,34,63,.22)!important;}
+  body > nav .burger{z-index:1003!important;}
+  body > nav .nav-overlay{display:none!important;}
+}
+@media (max-width:600px){
+  footer{padding:20px 0 14px!important;}
+  footer .footer-inner{gap:14px!important;}
+  footer .footer-cols{gap:18px!important;}
+  footer .footer-col h4{margin:0 0 6px!important;}
+  footer .footer-col a,footer .footer-col p{margin-bottom:4px!important;line-height:1.35;}
+  footer .logo-img{height:30px!important;}
+  footer .zuppy-social-links{margin-top:8px!important;}
+  footer .foot-bottom{margin-top:14px!important;padding-top:12px!important;gap:5px!important;}
+  footer .photo-credit{font-size:11px;line-height:1.35;margin-top:10px!important;}
+}
+</style>
 </head>
 <body class="zuppy-page-6">
 <nav>
