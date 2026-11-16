@@ -671,6 +671,19 @@ nav,header,section,footer,main{position:relative;z-index:1}
 #galeria{background:transparent!important;padding-top:0}
 @media(max-width:600px){.zuppy-sketch-hero{min-height:540px;padding:50px 12px}.zuppy-sketch-logo{font-size:clamp(68px,17vw,110px)}.zuppy-sketch-reserve{padding:12px 58px}}
 </style>
+
+<style>
+/* Menu móvel: painel ancorado à navegação, sem deslocar a página. */
+@media (max-width:860px){
+  nav{position:sticky;isolation:isolate;}
+  .nav-inner{position:relative;}
+  .nav-links{position:absolute!important;top:100%!important;right:12px!important;left:auto!important;width:min(320px,calc(100vw - 24px))!important;height:auto!important;max-height:calc(100dvh - 90px);padding:16px 20px!important;margin:0!important;transform:none!important;display:flex!important;flex-direction:column!important;gap:0!important;visibility:hidden;opacity:0;pointer-events:none;overflow-y:auto;border:2px solid var(--ink);border-radius:0 0 16px 16px;box-shadow:4px 6px 0 rgba(41,34,63,.15);z-index:160;transition:opacity .15s ease,visibility .15s ease;}
+  .nav-links.open{visibility:visible;opacity:1;pointer-events:auto;}
+  .nav-links a{white-space:normal;overflow-wrap:break-word;}
+  .nav-overlay,.nav-overlay.show{display:none!important;}
+  .burger{position:relative;z-index:161;}
+}
+</style>
 </head>
 <body class="zuppy-page-0">
 
@@ -837,7 +850,7 @@ nav,header,section,footer,main{position:relative;z-index:1}
     navLinks.classList.add('open');
     overlay.classList.add('show');
     burger.setAttribute('aria-expanded','true');
-    document.body.style.overflow='hidden';
+    /* O menu não bloqueia a deslocação da página. */
   }
   burger.addEventListener('click', function(){
     navLinks.classList.contains('open') ? closeMenu() : openMenu();
