@@ -662,8 +662,40 @@ iframe { max-width:100%; }
 body{background:#FFFFFF;}
 .pkg-card:not(.featured),.visit-card,.party-card:not(.featured),.value-card,.job-card,.perk,.form-box,.zuppy-chat,.card:not(.featured){background:#F59B36;}
 </style>
+<style id="zuppy-handdrawn-theme">
+/* Elementos desenhados à mão: decoração, sem interferir com conteúdo. */
+body{background:#fff!important;}
+.zuppy-socks-ribbon{position:relative;z-index:40;margin:0 auto;padding:12px 16px;background:#E75BB7;color:#29223F;text-align:center;font-family:'Baloo 2',sans-serif;font-size:clamp(15px,2.35vw,27px);font-weight:800;letter-spacing:.045em;line-height:1.25;transform:rotate(-.25deg);border-radius:36% 3% 27% 4% / 9% 18% 13% 21%;box-shadow:inset 0 5px rgba(255,255,255,.22),inset 0 -5px rgba(128,24,104,.14);text-transform:uppercase}
+.zuppy-socks-ribbon::before{content:'';position:absolute;inset:3px 7px;border-top:2px dashed rgba(255,255,255,.3);border-bottom:2px dashed rgba(132,29,105,.18);pointer-events:none}
+.zuppy-doodles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.zuppy-doodles i{position:absolute;display:block;filter:url(#zuppy-crayon-grain);opacity:.95}
+.zuppy-doodles .d1{top:195px;left:-85px;width:245px;height:170px;background:#17A6D5;border-radius:36% 64% 72% 28% / 50% 25% 75% 50%;transform:rotate(24deg)}
+.zuppy-doodles .d2{top:225px;right:-72px;width:245px;height:160px;background:#F27A19;border-radius:74% 26% 55% 45% / 38% 69% 31% 62%;transform:rotate(-25deg)}
+.zuppy-doodles .d3{top:530px;left:-105px;width:240px;height:210px;background:#E94C9E;border-radius:20% 80% 38% 62% / 64% 27% 73% 36%;transform:rotate(-27deg)}
+.zuppy-doodles .d4{top:710px;left:-75px;width:220px;height:175px;background:#FFDA12;border-radius:64% 36% 69% 31% / 41% 69% 31% 59%;transform:rotate(27deg)}
+.zuppy-doodles .d5{top:780px;right:-115px;width:245px;height:350px;background:#32BA4A;border-radius:78% 22% 35% 65% / 31% 54% 46% 69%;transform:rotate(-30deg)}
+.zuppy-doodles .d6{top:550px;right:9%;width:22px;height:22px;background:#7E3AB2;border-radius:50%;box-shadow:65px 70px 0 #7E3AB2,35px 132px 0 #7E3AB2,-75px -210px 0 #FFD800,-24px -155px 0 #FFD800}
+body.zuppy-page-1 .d1{top:310px;transform:rotate(-32deg)}body.zuppy-page-1 .d2{top:600px;transform:rotate(38deg)}body.zuppy-page-1 .d3{top:900px}body.zuppy-page-1 .d5{top:1200px}
+body.zuppy-page-2 .d1{top:600px;transform:rotate(70deg)}body.zuppy-page-2 .d2{top:290px;transform:rotate(-55deg)}body.zuppy-page-2 .d4{top:1050px}body.zuppy-page-2 .d5{top:760px;transform:rotate(22deg)}
+body.zuppy-page-3 .d1{top:950px}body.zuppy-page-3 .d2{top:400px}body.zuppy-page-3 .d3{top:300px;transform:rotate(55deg)}body.zuppy-page-3 .d5{top:1350px}
+body.zuppy-page-4 .d1{top:440px}body.zuppy-page-4 .d2{top:900px}body.zuppy-page-4 .d3{top:1250px}body.zuppy-page-4 .d5{top:340px}
+body.zuppy-page-5 .d1{top:790px}body.zuppy-page-5 .d2{top:350px}body.zuppy-page-5 .d3{top:650px}body.zuppy-page-5 .d5{top:1080px}
+body.zuppy-page-6 .d1{top:420px}body.zuppy-page-6 .d2{top:1080px}body.zuppy-page-6 .d3{top:850px}body.zuppy-page-6 .d5{top:530px}
+body.zuppy-page-7 .d1{top:720px}body.zuppy-page-7 .d2{top:540px}body.zuppy-page-7 .d3{top:1120px}body.zuppy-page-7 .d5{top:320px}
+body.zuppy-page-8 .d1{top:520px}body.zuppy-page-8 .d2{top:1120px}body.zuppy-page-8 .d3{top:770px}body.zuppy-page-8 .d5{top:1400px}
+body.zuppy-page-9 .d1{top:1060px}body.zuppy-page-9 .d2{top:490px}body.zuppy-page-9 .d3{top:450px}body.zuppy-page-9 .d5{top:980px}
+body.zuppy-page-10 .d1{top:480px}body.zuppy-page-10 .d2{top:780px}body.zuppy-page-10 .d3{top:1200px}body.zuppy-page-10 .d5{top:400px}
+body.zuppy-page-11 .d1{top:900px}body.zuppy-page-11 .d2{top:370px}body.zuppy-page-11 .d3{top:600px}body.zuppy-page-11 .d5{top:1250px}
+body.zuppy-page-12 .d1{top:600px}body.zuppy-page-12 .d2{top:1100px}body.zuppy-page-12 .d3{top:320px}body.zuppy-page-12 .d5{top:860px}
+body.zuppy-page-13 .d1{top:350px}body.zuppy-page-13 .d2{top:750px}body.zuppy-page-13 .d3{top:1020px}body.zuppy-page-13 .d5{top:520px}
+body.zuppy-page-14 .d1{top:850px}body.zuppy-page-14 .d2{top:400px}body.zuppy-page-14 .d3{top:700px}body.zuppy-page-14 .d5{top:1180px}
+body.zuppy-page-15 .d1{top:450px}body.zuppy-page-15 .d2{top:1050px}body.zuppy-page-15 .d3{top:900px}body.zuppy-page-15 .d5{top:650px}
+body.zuppy-page-16 .d1{top:1000px}body.zuppy-page-16 .d2{top:630px}body.zuppy-page-16 .d3{top:450px}body.zuppy-page-16 .d5{top:1200px}
+nav,header,section,footer,main{position:relative;z-index:1}
+@media(max-width:800px){.zuppy-doodles i{opacity:.42;transform:scale(.5)!important}.zuppy-doodles .d1,.zuppy-doodles .d3,.zuppy-doodles .d4{left:-160px}.zuppy-doodles .d2,.zuppy-doodles .d5{right:-165px}.zuppy-doodles .d6{display:none}.zuppy-socks-ribbon{font-size:clamp(12px,3.3vw,19px);padding:12px 10px}}
+</style>
 </head>
-<body>
+<body class="zuppy-page-3">
 <nav>
   <div class="nav-inner">
     <a href="/" class="logo-link"><img src="/zuppy-logo.png" alt="Zuppy Fun Park" class="logo-img"></a>
@@ -680,6 +712,8 @@ body{background:#FFFFFF;}
   </div>
   <div class="nav-overlay" id="navOverlay"></div>
 </nav>
+<div class="zuppy-socks-ribbon" role="note">OBRIGATÓRIO O USO DE MEIAS ANTIDERRAPANTES</div>
+<div class="zuppy-doodles" aria-hidden="true"><i class="d1"></i><i class="d2"></i><i class="d3"></i><i class="d4"></i><i class="d5"></i><i class="d6"></i></div>
 <section class="page-hero wrap" style="padding:70px 0 20px;text-align:center;">
   <span class="eyebrow-free">Entradas Individuais</span>
   <h1 style="font-size:clamp(2.2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto;">Escolhe o teu tempo de aventura</h1>
