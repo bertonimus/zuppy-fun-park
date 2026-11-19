@@ -738,6 +738,35 @@ nav,header,section,footer,main{position:relative;z-index:1}
   footer .photo-credit{font-size:11px;line-height:1.35;margin-top:10px!important;}
 }
 </style>
+
+<style id="festas-recriacao-desenho">
+/* Recriação dos dois painéis do desenho, apenas na página Festas. */
+html body{background:#FFFFFF!important;}
+.festas-desenho-hero{text-align:center!important;padding:64px 12px 24px!important;}
+.festas-desenho-hero h1{font-family:'Baloo 2',sans-serif;font-size:clamp(2rem,5vw,3.6rem)!important;font-weight:800;color:#29223F;letter-spacing:.035em;max-width:none!important;}
+.festas-desenho-hero .festas-desenho-subtitle{font-family:'Baloo 2',sans-serif;font-size:clamp(1.3rem,2.8vw,2rem)!important;opacity:1!important;margin:10px 0 0;}
+.festas-desenho-hero .festas-desenho-intro{font-size:clamp(.95rem,1.7vw,1.15rem)!important;opacity:1!important;margin:4px 0 0;}
+.festas-desenho-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:clamp(20px,6vw,90px);max-width:1030px;margin:16px auto 80px;}
+.festas-desenho-precos,.festas-desenho-lanche{padding:30px 26px;border:2px solid #29223F;border-radius:6px;min-width:0;}
+.festas-desenho-precos{background:#278FC5;color:#29223F;display:flex;flex-direction:column;align-items:center;}
+.festas-desenho-pricebox{background:#FFFFFF;border:2px solid #29223F;padding:14px 22px;display:flex;flex-direction:column;text-align:center;gap:3px;width:min(100%,245px);}
+.festas-desenho-pricebox strong{font-family:'Baloo 2',sans-serif;font-size:clamp(2.5rem,4vw,3.5rem);color:#E62683;line-height:1;}
+.festas-desenho-pricebox span{font-weight:700;}
+.festas-desenho-pricebox small{font-size:.8rem;}
+.festas-desenho-precos h2{font-family:'Baloo 2',sans-serif;font-size:1.3rem;margin:24px 0 14px;}
+.festas-desenho-horarios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:0;width:100%;}
+.festas-desenho-horarios li{background:#FFFFFF;border:1.5px solid #29223F;text-align:center;padding:9px 4px;font-size:.9rem;font-weight:700;}
+.festas-desenho-horarios li:last-child{grid-column:1/-1;}
+.festas-desenho-extra{background:#E75BB7;padding:10px 12px;margin:26px 0 0!important;text-align:center;font-weight:800;font-size:.9rem!important;border-radius:4px;}
+.festas-desenho-lanche{background:#4A9E54;display:flex;flex-direction:column;text-align:center;}
+.festas-desenho-lanche h2{font-family:'Baloo 2',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);margin:0 0 25px;}
+.festas-desenho-lanche-interior{background:#FFFFFF;border:2px solid #29223F;padding:22px 16px;flex:1;text-align:left;}
+.festas-desenho-lanche-interior h3{font-family:'Baloo 2',sans-serif;text-align:center;font-size:1.25rem;margin:0 0 18px;}
+.festas-desenho-lanche-interior ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;list-style:none;margin:0;padding:0;}
+.festas-desenho-lanche-interior li{font-size:.95rem;}
+.festas-desenho-bolo{font-family:'Baloo 2',sans-serif;font-weight:800;margin:22px 0 0!important;font-size:1rem!important;}
+@media(max-width:760px){.festas-desenho-grid{grid-template-columns:1fr;max-width:470px;margin:12px auto 55px;gap:22px;}.festas-desenho-precos,.festas-desenho-lanche{padding:24px 18px;}.festas-desenho-hero{padding:40px 12px 15px!important;}}
+</style>
 </head>
 <body class="zuppy-page-4">
 <nav>
@@ -758,58 +787,48 @@ nav,header,section,footer,main{position:relative;z-index:1}
 </nav>
 <div class="zuppy-socks-ribbon" role="note">OBRIGATÓRIO O USO DE MEIAS ANTIDERRAPANTES</div>
 <div class="zuppy-doodles" aria-hidden="true"><i class="d1"></i><i class="d2"></i><i class="d3"></i><i class="d4"></i><i class="d5"></i><i class="d6"></i></div>
-<section class="page-hero wrap" style="padding:70px 0 20px;text-align:center;">
-  <span class="eyebrow-free">Festas de Aniversário</span>
-  <h1 style="font-size:clamp(2.2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto;">Festas de aniversário</h1>
-  <p style="max-width:56ch;margin:16px auto 0;opacity:0.8;font-size:1.05rem;">Festas de aniversário — consulta os preços, horários e o lanche incluído.</p>
+<section class="page-hero wrap festas-desenho-hero">
+  <h1>FESTAS DE ANIVERSÁRIO</h1>
+  <p class="festas-desenho-subtitle">Celebra o teu dia especial connosco</p>
+  <p class="festas-desenho-intro">Muita brincadeira, comida deliciosa e memórias inesquecíveis!</p>
 </section>
-<section class="wrap">
-  <div class="parties">
-    <div>
-      <span class="eyebrow-free" style="background:var(--yellow);">Festas de aniversário</span>
-      <h2>Uma festa, sem complicações</h2>
-      <p>Cerca de 2 horas para brincar e 30 minutos para lanchar e cantar os parabéns.</p>
-      <ul class="party-list">
-        <li>Cerca de 2 horas de brincadeira e 30 minutos para o lanche e os parabéns</li>
-        <li>Acesso a todas as zonas do parque</li>
-        <li>Acesso ao insuflável partilhado com os restantes visitantes</li>
-        <li>Decoração não incluída no pacote</li>
-        <li>Monitor de festas dedicado</li>
-        <li>Convites digitais para enviar aos convidados</li>
-      </ul>
-    </div>
-    <div class="party-card">
-      <div>Festa de Aniversário Zuppy</div>
-      <div class="price">15€ <span>/ participante</span></div>
-      <ul>
-        <li>Duração aproximada: 2h30 (2h de brincadeira + 30 min para lanche e parabéns)</li>
-        <li>Mínimo de 15 e máximo de 35 participantes</li>
-        <li>Aniversariante ganha um par de meias Zuppy 🧦</li>
-      </ul>
-      <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20marcar%20uma%20festa%20de%20anivers%C3%A1rio%20no%20Zuppy!" target="_blank" rel="noopener" class="btn-primary" style="display:block;text-align:center;">Pedir orçamento</a>
-    </div>
-  <div class="zuppy-party-times">
-      <h3>Horários das festas de aniversário</h3>
-      <ul><li>10h00 – 12h30</li><li>10h30 – 13h00</li><li>11h00 – 13h30</li><li>15h00 – 17h30</li><li>15h30 – 18h00</li><li>16h00 – 18h30</li><li>16h30 – 19h00</li></ul>
-    </div>
-    <div class="zuppy-lanche">
-      <div class="zuppy-lanche-heading">
-        <span class="eyebrow-free">Festas de aniversário</span>
-        <h2 id="lanche-festas-title">O lanche da festa 🍕</h2>
-        <p>O lanche está incluído na festa de aniversário.</p>
+<section class="wrap festas-desenho-section">
+  <div class="festas-desenho-grid">
+    <div class="festas-desenho-precos">
+      <div class="festas-desenho-pricebox">
+        <strong>17€</strong>
+        <span>Por participante</span>
+        <small>Mínimo 15, máximo 35</small>
       </div>
-      <ul class="zuppy-lanche-list">
-        <li>Pizzas 🍕</li>
-        <li>Cachorro quente 🌭</li>
-        <li>Batatas fritas 🍟</li>
-        <li>Fruta 🍊</li>
-        <li>Bolachas 🍪</li>
-        <li>Gelatinas</li>
-        <li>Pipocas 🍿</li>
-        <li>Gomas 🍬</li>
-        <li>Sumo e água</li>
+      <h2>Horários disponíveis</h2>
+      <ul class="festas-desenho-horarios">
+        <li>10h00 – 12h30</li>
+        <li>10h30 – 13h00</li>
+        <li>11h00 – 13h30</li>
+        <li>15h00 – 17h30</li>
+        <li>15h30 – 18h00</li>
+        <li>16h00 – 18h30</li>
+        <li>16h30 – 19h00</li>
       </ul>
-      <p class="zuppy-lanche-note"><strong>Nota:</strong> O bolo de aniversário não está incluído.</p>
+      <p class="festas-desenho-extra">Festas com 20 ou mais aniversariantes: acréscimo de 50€</p>
+    </div>
+    <div class="festas-desenho-lanche">
+      <h2>LANCHE INCLUÍDO</h2>
+      <div class="festas-desenho-lanche-interior">
+        <h3>O lanche da festa</h3>
+        <ul>
+          <li>Pizzas 🍕</li>
+          <li>Cachorro quente 🌭</li>
+          <li>Batatas fritas 🍟</li>
+          <li>Fruta 🍊</li>
+          <li>Bolachas 🍪</li>
+          <li>Gelatinas</li>
+          <li>Pipocas 🍿</li>
+          <li>Gomas 🍬</li>
+          <li>Sumo e água</li>
+        </ul>
+      </div>
+      <p class="festas-desenho-bolo">BOLO DE ANIVERSÁRIO NÃO INCLUÍDO</p>
     </div>
   </div>
 </section>
