@@ -733,6 +733,21 @@ nav,header,section,footer,main{position:relative;z-index:1}
   footer .photo-credit{font-size:11px;line-height:1.35;margin-top:10px!important;}
 }
 </style>
+
+<style id="entradas-desenho-precos">
+/* Layout da secção de entradas conforme o desenho fornecido. */
+html body{background:#A7CE91!important;}
+.entradas-hero{text-align:center!important;padding:65px 0 20px!important;}
+.entradas-hero h1{font-family:'Baloo 2',sans-serif;font-size:clamp(2rem,5vw,3.6rem)!important;font-weight:800;letter-spacing:.035em;color:#29223F!important;max-width:none!important;}
+.entradas-hero p{font-family:'Baloo 2',sans-serif;font-size:clamp(1.2rem,2.6vw,1.9rem)!important;color:#29223F;opacity:1!important;margin:12px auto 0;}
+.entradas-precos .pkg-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:25px 0 85px;}
+.entradas-precos .pkg-card,.entradas-precos .pkg-card:not(.featured){background:#FFFFFF!important;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;min-height:265px;justify-content:flex-start;padding:32px 20px;border:2px solid #29223F;}
+.entradas-precos .pkg-card h3{font-family:'Baloo 2',sans-serif;font-size:clamp(1.25rem,2vw,1.75rem);color:#29223F;margin:0;}
+.entradas-precos .pkg-card .price{font-size:clamp(2.3rem,4vw,3.3rem)!important;color:#E62683;margin:0;font-weight:800;}
+.entradas-precos .pkg-card p{font-size:1.05rem;line-height:1.45;margin:0;color:#29223F;}
+.entradas-favorito{display:inline-block;background:#36B5D9;color:#29223F;font-weight:800;font-family:'Baloo 2',sans-serif;padding:7px 22px;border-radius:9px;transform:rotate(-3deg);}
+@media(max-width:800px){.entradas-precos .pkg-grid,.entradas-precos .pkg-grid.cols-4{grid-template-columns:1fr!important;max-width:430px!important;margin:0 auto;gap:18px;}.entradas-precos .pkg-card{min-height:220px!important;}.entradas-hero{padding:42px 12px 12px!important;}}
+</style>
 </head>
 <body class="zuppy-page-2">
 <nav>
@@ -753,40 +768,26 @@ nav,header,section,footer,main{position:relative;z-index:1}
 </nav>
 <div class="zuppy-socks-ribbon" role="note">OBRIGATÓRIO O USO DE MEIAS ANTIDERRAPANTES</div>
 <div class="zuppy-doodles" aria-hidden="true"><i class="d1"></i><i class="d2"></i><i class="d3"></i><i class="d4"></i><i class="d5"></i><i class="d6"></i></div>
-<section class="page-hero wrap" style="padding:70px 0 20px;text-align:center;">
-  <span class="eyebrow-free">Entradas Individuais</span>
-  <h1 style="font-size:clamp(2.2rem,4.5vw,3.2rem);max-width:22ch;margin:0 auto;">Escolhe o teu tempo de aventura</h1>
-  <p style="max-width:56ch;margin:16px auto 0;opacity:0.8;font-size:1.05rem;">Bilhetes individuais — consulta os preços e horários.</p>
+<section class="page-hero wrap entradas-hero">
+  <h1>ENTRADAS INDIVIDUAIS</h1>
+  <p>O teu tempo, a tua diversão</p>
 </section>
-<section class="wrap">
+<section class="wrap entradas-precos">
   <div class="pkg-grid cols-4">
     <div class="pkg-card">
-      <span class="pill">1 hora</span>
-      <h3>Sessão Rápida</h3>
-      <div class="price">10€ <span>/ pessoa</span></div>
-      <ul>
-        <li>Acesso a todas as zonas</li>
-        <li>Uso obrigatório de meias antiderrapantes</li>
-        <li>Ideal para uma visita rápida</li>
-      </ul>
-      <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20reservar%20uma%20entrada%20no%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Reservar</a>
+      <h3>1 HORA</h3>
+      <div class="price">10€</div>
+      <p>Acesso a todo o parque!</p>
     </div>
     <div class="pkg-card">
-      <span class="pill">1h30</span>
-      <h3>Sessão Intermédia</h3>
-      <div class="price">13€ <span>/ pessoa</span></div>
-      <ul>
-        <li>Acesso a todas as zonas</li>
-        <li>Uso obrigatório de meias antiderrapantes</li>
-        <li>Mais tempo para experimentar tudo</li>
-      </ul>
-      <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20reservar%20uma%20entrada%20no%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Reservar</a>
+      <h3>1 HORA 30 MINUTOS</h3>
+      <div class="price">13€</div>
+      <span class="entradas-favorito">FAVORITO</span>
     </div>
     <div class="pkg-card">
-      <span class="pill">2 horas</span><h3>Sessão 2 Horas</h3>
-      <div class="price">16€ <span>/ pessoa</span></div>
-      <ul><li>Acesso a todas as zonas</li><li>Uso obrigatório de meias antiderrapantes</li><li>2 horas de diversão</li></ul>
-      <a href="https://wa.me/351969258511?text=Ol%C3%A1%2C%20queria%20reservar%20uma%20entrada%20no%20Zuppy%20Fun%20Park!" target="_blank" rel="noopener" class="btn-secondary" style="text-align:center;">Reservar</a>
+      <h3>2 HORAS</h3>
+      <div class="price">16€</div>
+      <p>Diversão em dose extra</p>
     </div>
   </div>
 </section>
