@@ -736,6 +736,18 @@ footer .footer-col h4{color:#FFE36A!important;}
 footer .footer-col a,footer .footer-col p,footer .foot-bottom,footer .photo-credit,footer .photo-credit a{color:#FFFFFF!important;}
 footer .zuppy-social-links a{color:#FFFFFF!important;}
 </style>
+
+<style id="zuppy-inicio-fotos-meias-salpicos">
+.zuppy-socks-ribbon{max-width:min(760px,calc(100% - 28px));border-radius:22px!important;display:flex;align-items:center;justify-content:center;gap:12px;padding:9px 18px!important;}
+.zuppy-socks-icon{font-size:clamp(22px,3vw,34px);line-height:1;flex-shrink:0;transform:rotate(-14deg);}
+.zuppy-socks-icon:last-child{transform:rotate(18deg);}
+.zuppy-home-fotos{padding:18px 0 16px;position:relative;}
+.zuppy-home-fotos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.zuppy-home-fotos-grid img{width:100%;height:230px;object-fit:cover;border-radius:22px;border:3px solid #29223F;box-shadow:5px 5px 0 #FFE36A;}
+.zuppy-sketch-hero:before,.zuppy-home-fotos:before{content:"";position:absolute;width:70px;height:70px;left:3%;top:22%;pointer-events:none;background:radial-gradient(ellipse at 15% 50%,#E75BB7 0 8%,transparent 9%),radial-gradient(ellipse at 70% 15%,#F6CB32 0 10%,transparent 11%),radial-gradient(ellipse at 78% 75%,#32BA4A 0 9%,transparent 10%),radial-gradient(ellipse at 28% 85%,#278FC5 0 8%,transparent 9%);transform:rotate(-15deg);}
+.zuppy-home-fotos:before{left:auto;right:0;top:-30px;}
+@media(max-width:650px){.zuppy-socks-ribbon{gap:7px;padding:9px 12px!important;font-size:12px!important;}.zuppy-socks-icon{font-size:22px;}.zuppy-home-fotos-grid{grid-template-columns:1fr 1fr;gap:12px;}.zuppy-home-fotos-grid img{height:155px;}.zuppy-home-fotos-grid img:last-child{grid-column:1/-1;height:190px;}}
+</style>
 </head>
 <body class="zuppy-page-0">
 
@@ -753,7 +765,7 @@ footer .zuppy-social-links a{color:#FFFFFF!important;}
   </div>
   <div class="nav-overlay" id="navOverlay"></div>
 </nav>
-<div class="zuppy-socks-ribbon" role="note">OBRIGATÓRIO O USO DE MEIAS ANTIDERRAPANTES</div>
+<div class="zuppy-socks-ribbon" role="note"><span class="zuppy-socks-icon" aria-hidden="true">🧦</span><span>OBRIGATÓRIO O USO DE MEIAS ANTIDERRAPANTES</span><span class="zuppy-socks-icon" aria-hidden="true">🧦</span></div>
 <div class="zuppy-doodles" aria-hidden="true"><i class="d1"></i><i class="d2"></i><i class="d3"></i><i class="d4"></i><i class="d5"></i><i class="d6"></i></div>
 
 <header class="hero zuppy-sketch-hero" id="top">
@@ -766,6 +778,13 @@ footer .zuppy-social-links a{color:#FFFFFF!important;}
 </header>
 
 
+<section class="wrap zuppy-home-fotos" aria-label="Fotografias do Zuppy Fun Park">
+  <div class="zuppy-home-fotos-grid">
+    <img src="/3232.jpeg" alt="Trampolins e escorregas do Zuppy Fun Park" loading="lazy">
+    <img src="/313123213.jpeg" alt="Zona infantil com escorregas e piscina de bolas" loading="lazy">
+    <img src="/32313123123.jpeg" alt="Vista geral do Zuppy Fun Park" loading="lazy">
+  </div>
+</section>
 <section class="section" id="galeria" aria-label="Abrir galeria de fotografias"><div class="wrap" style="text-align:center;padding:30px 0 65px"><a class="zuppy-sketch-gallery-title" href="/galeria/" style="display:inline-block;text-decoration:none;cursor:pointer" aria-label="Abrir a galeria de fotografias">GALERIA</a></div></section>
 
 
