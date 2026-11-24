@@ -742,15 +742,13 @@ footer .zuppy-social-links a{color:#FFFFFF!important;}
 .zuppy-socks-icon{font-size:clamp(22px,3vw,34px);line-height:1;flex-shrink:0;transform:rotate(-14deg);}
 .zuppy-socks-icon:last-child{transform:rotate(18deg);}
 .zuppy-home-fotos{padding:18px 0 16px;position:relative;}
-.zuppy-home-fotos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
-.zuppy-home-fotos-grid{justify-content:center;grid-template-columns:repeat(6,minmax(0,1fr));}
-.zuppy-home-fotos-grid img{grid-column:span 2;}
-.zuppy-home-fotos-grid img:nth-child(4){grid-column:2 / span 2;}
-.zuppy-home-fotos-grid img:nth-child(5){grid-column:4 / span 2;}
+.zuppy-home-fotos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.zuppy-home-fotos-grid img{grid-column:auto;}
+.zuppy-home-fotos-grid img:last-child{grid-column:1/-1;}
 .zuppy-home-fotos-grid img{width:100%;height:230px;object-fit:cover;border-radius:22px;border:3px solid #29223F;box-shadow:5px 5px 0 #FFE36A;}
 .zuppy-sketch-hero:before,.zuppy-home-fotos:before{content:"";position:absolute;width:70px;height:70px;left:3%;top:22%;pointer-events:none;background:radial-gradient(ellipse at 15% 50%,#E75BB7 0 8%,transparent 9%),radial-gradient(ellipse at 70% 15%,#F6CB32 0 10%,transparent 11%),radial-gradient(ellipse at 78% 75%,#32BA4A 0 9%,transparent 10%),radial-gradient(ellipse at 28% 85%,#278FC5 0 8%,transparent 9%);transform:rotate(-15deg);}
 .zuppy-home-fotos:before{left:auto;right:0;top:-30px;}
-@media(max-width:650px){.zuppy-home-fotos-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.zuppy-home-fotos-grid img,.zuppy-home-fotos-grid img:nth-child(4),.zuppy-home-fotos-grid img:nth-child(5){grid-column:auto;}.zuppy-home-fotos-grid img:nth-child(4){grid-column:1;}.zuppy-home-fotos-grid img:nth-child(5){grid-column:2;}.zuppy-socks-ribbon{gap:7px;padding:9px 12px!important;font-size:12px!important;}.zuppy-socks-icon{font-size:22px;}.zuppy-home-fotos-grid{grid-template-columns:1fr 1fr;gap:12px;}.zuppy-home-fotos-grid img{height:155px;}.zuppy-home-fotos-grid img:last-child{grid-column:1/-1;height:190px;}}
+@media(max-width:650px){.zuppy-socks-ribbon{gap:7px;padding:9px 12px!important;font-size:12px!important;}.zuppy-socks-icon{font-size:22px;}.zuppy-home-fotos-grid{grid-template-columns:1fr 1fr;gap:12px;}.zuppy-home-fotos-grid img{height:155px;}.zuppy-home-fotos-grid img:last-child{grid-column:1/-1;height:190px;}}
 </style>
 </head>
 <body class="zuppy-page-0">
